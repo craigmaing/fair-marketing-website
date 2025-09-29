@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PricingCalculator from '../components/PricingCalculator.astro';
+
+const pageTitle = 'Transparent Pricing | Fearnbell Marketing';
+const pageDescription = 'Clear, upfront pricing for all our services. No hidden fees, no surprises. Fair 4-payment structure for every project.';
+const pageKeywords = ['marketing agency pricing', 'transparent pricing', 'fair marketing costs', 'website development pricing', 'SEO pricing'];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-amber-50 to-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Transparent Pricing. No BS.
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Every price published. Every fee explained. Pay in 4 easy installments.
+        </p>
+        <div class="inline-flex items-center px-6 py-3 bg-green-100 rounded-lg">
+          <span class="text-green-800 font-semibold">
+            💚 All prices include competitor research & image sourcing
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Transparent Digital Marketing Services
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Every service. Every price. Published upfront. No surprises.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <!-- Website Development -->
+        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Website Development</h3>
+          <p class="text-gray-600 mb-6">
+            Lightning-fast websites that outrank competitors. Built with modern tech, perfect SEO scores.
+          </p>
+          <div class="text-3xl font-bold text-blue-600 mb-2">From £2,000</div>
+          <p class="text-sm text-gray-500 mb-6">Split over 4 months</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              5-page responsive website
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Competitor keyword research
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Basic SEO optimization
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              30-day support
+            </li>
+          </ul>
+        </div>
+
+        <!-- SEO Services -->
+        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-2xl">📈</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">SEO Optimization</h3>
+          <p class="text-gray-600 mb-6">
+            Ethical SEO that gets real results. No black-hat tactics, just proven strategies.
+          </p>
+          <div class="text-3xl font-bold text-green-600 mb-2">From £500/mo</div>
+          <p class="text-sm text-gray-500 mb-6">Month-to-month, cancel anytime</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Advanced competitor analysis
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Keyword strategy
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Monthly reports
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Content optimization
+            </li>
+          </ul>
+        </div>
+
+        <!-- Complete Package -->
+        <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-8 hover:shadow-lg transition-shadow border-2 border-blue-200">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg flex items-center justify-center mb-6">
+            <span class="text-2xl">⭐</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Complete Package</h3>
+          <p class="text-gray-600 mb-6">
+            Website + SEO + competitor research. Everything you need to dominate online.
+          </p>
+          <div class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600 mb-2">
+            From £3,500
+          </div>
+          <p class="text-sm text-gray-500 mb-6">Best value - save £1,000</p>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              10-page website
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              3 months SEO included
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Full competitor analysis
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Priority support
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Calculator Section -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Calculate Your Project Cost Instantly
+        </h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Use our transparent pricing calculator. See exactly what you'll pay - no hidden fees.
+        </p>
+      </div>
+      
+      <!-- Pricing Calculator Component -->
+      <PricingCalculator />
+    </div>
+  </section>
+
+  <!-- Payment Structure -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Our Fair 4-Payment Structure
+        </h2>
+        <div class="bg-gray-50 rounded-xl shadow-lg p-8">
+          <div class="grid md:grid-cols-4 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 1</div>
+              <p class="text-sm text-gray-600">Project kickoff & research</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 2</div>
+              <p class="text-sm text-gray-600">Design approval & development</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 3</div>
+              <p class="text-sm text-gray-600">Development & testing</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 4</div>
+              <p class="text-sm text-gray-600">Launch & optimization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          What's Always Included
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <span class="text-4xl mb-4 block">🔍</span>
+            <h3 class="text-xl font-semibold mb-2">Competitor Research</h3>
+            <p class="text-gray-600">Deep analysis of your competition included in every package</p>
+          </div>
+          <div class="text-center">
+            <span class="text-4xl mb-4 block">📸</span>
+            <h3 class="text-xl font-semibold mb-2">Image Sourcing</h3>
+            <p class="text-gray-600">Professional images sourced and optimized at no extra cost</p>
+          </div>
+          <div class="text-center">
+            <span class="text-4xl mb-4 block">📊</span>
+            <h3 class="text-xl font-semibold mb-2">Performance Reports</h3>
+            <p class="text-gray-600">Monthly reports showing real metrics and ROI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Pricing FAQ
+        </h2>
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Can I cancel at any time?</h3>
+            <p class="text-gray-600">Yes! You can cancel at any time and only pay for work completed.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Are there any hidden fees?</h3>
+            <p class="text-gray-600">Never. The price you see is the price you pay. Period.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">What if I need something custom?</h3>
+            <p class="text-gray-600">We'll provide a clear, itemized quote before any work begins.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Do you offer discounts?</h3>
+            <p class="text-gray-600">Our prices are already fair. We believe in transparent, consistent pricing for everyone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Ready to Get Started?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Choose your package and let's build something amazing together.
+      </p>
+      <a href="/contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors">
+        Start Your Project Today
+      </a>
+    </div>
+  </section>
+</BaseLayout>

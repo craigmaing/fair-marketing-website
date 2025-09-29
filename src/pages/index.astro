@@ -1,0 +1,227 @@
+---
+// Site 2's CONTENT rebuilt with Site 1's STRUCTURE
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Transparency from '../components/Transparency.astro';
+import { brand } from '../lib/brand';
+---
+
+<BaseLayout 
+  title="Fair Marketing - Transparent Pricing Agency London"
+  description="Fair Marketing - The only agency with 100% transparent pricing. No hidden fees, fair 4-payment plans, and proven results."
+  keywords={['fair pricing marketing agency', 'transparent marketing london', 'no hidden fees marketing']}
+>
+  <!-- Hero Section - Fixed background contrast -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 lg:py-32">
+    <div class="absolute inset-0 opacity-10">
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&auto=format&fm=webp"
+        alt="Team collaboration"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-transparent to-purple-900/5"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Trust Badges from Site 2 -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <span class="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
+            ✓ 100% Transparent Pricing
+          </span>
+          <span class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
+            ✓ Fair 4-Payment Plan
+          </span>
+        </div>
+
+        <!-- Main Headline - Improved contrast and consistency -->
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          Fair Marketing<br/>
+          <span class="text-blue-700">
+            That Actually Works
+          </span>
+        </h1>
+
+        <!-- Site 2's value prop - Consistent colors -->
+        <p class="text-xl text-slate-700 mb-8 max-w-3xl mx-auto">
+          The only marketing agency in London with <span class="font-semibold text-emerald-600">100% transparent pricing</span>.
+          No hidden fees. No surprise bills. Just fair, honest marketing that delivers results.
+        </p>
+
+        <p class="text-lg text-slate-600 mb-12">
+          We believe in transparency and publish every price upfront - no guesswork, no surprises.
+        </p>
+
+        <!-- CTAs - Standardized button styles -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/pricing" class="px-8 py-4 bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors text-lg">
+            See Our Pricing Calculator
+          </a>
+          <a href="/contact" class="px-8 py-4 border-2 border-blue-700 text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors text-lg">
+            Get Free Consultation
+          </a>
+        </div>
+
+        <!-- Key Benefits Grid - Consistent colors -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-600">✓</div>
+            <p class="text-sm text-slate-600 mt-1">No surprise fees</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-600">✓</div>
+            <p class="text-sm text-slate-600 mt-1">Published pricing</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-600">✓</div>
+            <p class="text-sm text-slate-600 mt-1">Flexible payments</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-600">✓</div>
+            <p class="text-sm text-slate-600 mt-1">Proven results</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          What We Do
+        </h2>
+        <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          Professional marketing services with transparent pricing
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Website Development</h3>
+          <p class="text-slate-600">Fast, modern websites that rank</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <span class="text-2xl">📈</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">SEO Optimization</h3>
+          <p class="text-slate-600">Ethical SEO that delivers results</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <span class="text-2xl">📊</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Marketing Strategy</h3>
+          <p class="text-slate-600">Data-driven marketing that works</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/pricing" class="inline-flex items-center px-8 py-4 bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors text-lg">
+          View All Pricing & Services →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Calculator CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Transparent Pricing Calculator
+        </h2>
+        <p class="text-xl text-slate-600 mb-8">
+          No hidden fees. No surprise costs. Calculate your exact project price instantly.
+        </p>
+        <a href="/pricing#pricing-calculator" class="inline-flex items-center px-8 py-4 bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 hover:shadow-lg transition-all">
+          <span class="mr-2">Calculate Your Project Cost</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+        </a>
+        <p class="text-sm text-slate-500 mt-4">Takes 30 seconds • No email required</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section - Site 2 content -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Why We're Different
+          </h2>
+          <p class="text-lg text-slate-600 mb-6">
+            We founded Fair Marketing with a simple mission: to provide exceptional marketing services
+            with complete transparency and fair pricing.
+          </p>
+          <p class="text-lg text-slate-600 mb-6">
+            We believe in complete transparency. Every price is published. Every strategy is explained.
+            Every result is measured.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <span class="text-emerald-600 text-xl mr-3">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1 text-slate-800">100% Transparent</h4>
+                <p class="text-slate-600">All prices published upfront</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-emerald-600 text-xl mr-3">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1 text-slate-800">Fair Payment Terms</h4>
+                <p class="text-slate-600">Split over 4 months, cancel anytime</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="text-emerald-600 text-xl mr-3">✓</span>
+              <div>
+                <h4 class="font-semibold mb-1 text-slate-800">Proven Results</h4>
+                <p class="text-slate-600">Real case studies, real ROI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&auto=format&fm=webp"
+            alt="Team working"
+            class="rounded-xl shadow-lg"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparency Section -->
+  <Transparency />
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">
+        Ready to Work With an Honest Marketing Agency?
+      </h2>
+      <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+        Get your free consultation and see our transparent pricing in action.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/pricing" class="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg">
+          See Pricing Calculator
+        </a>
+        <a href="/contact" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition-colors text-lg">
+          Get Free Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

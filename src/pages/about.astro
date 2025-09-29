@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'About Fearnbell Marketing | Fair, Transparent Digital Marketing';
+const pageDescription = 'Learn about Fearnbell Marketing - the ethical digital marketing agency that believes in fair pricing, transparent practices, and delivering real results.';
+const pageKeywords = ['about fearnbell marketing', 'ethical marketing agency', 'transparent marketing', 'fair pricing agency'];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-white py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <img 
+        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&h=1080&fit=crop&auto=format" 
+        alt="Business meeting" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          The Marketing Agency That Actually Cares
+        </h1>
+        <p class="text-xl text-gray-600">
+          We're Fearnbell Marketing - and we're on a mission to make digital marketing fair, transparent, and accessible to every business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Story</h2>
+        <div class="prose prose-lg mx-auto">
+          <p class="text-gray-600 mb-6">
+            Fearnbell Marketing was founded on a simple principle: marketing agencies shouldn't overcharge, underdeliver, or hide their pricing behind "contact us for a quote" forms.
+          </p>
+          <p class="text-gray-600 mb-6">
+            We've seen too many businesses get burned by agencies that promise the world but deliver mediocre results at premium prices. That's why we built Fearnbell differently.
+          </p>
+          <p class="text-gray-600">
+            Every decision we make is guided by our core values: transparency, fairness, and results. We publish our prices, share our strategies, and only succeed when our clients succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Values</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 mb-4">
+              <span class="text-3xl">💚</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Transparency First</h3>
+            <p class="text-gray-600">
+              No hidden fees, no surprise charges. What you see is what you get.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-4">
+              <span class="text-3xl">🤝</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Fair Pricing</h3>
+            <p class="text-gray-600">
+              Ethical pricing that reflects the actual work involved. No overcharging.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-100 mb-4">
+              <span class="text-3xl">📈</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Results Driven</h3>
+            <p class="text-gray-600">
+              We measure success by your growth, not our billable hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Ready to Work With an Honest Marketing Agency?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Let's build something amazing together - with fair pricing and transparent practices.
+      </p>
+      <a href="/contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors">
+        Start Your Project
+      </a>
+    </div>
+  </section>
+</BaseLayout>

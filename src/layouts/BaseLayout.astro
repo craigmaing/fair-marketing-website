@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+import BaseHead from '../components/seo/BaseHead.astro';
+import Header from '../components/brand/Header.astro';
+import Footer from '../components/brand/Footer.astro';
+import StructuredData from '../components/seo/StructuredData.astro';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  structuredDataType?: 'Organization' | 'BlogPosting' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'LocalBusiness';
+  structuredData?: any;
+}
+
+const {
+  title,
+  description,
+  keywords,
+  image,
+  canonical,
+  noindex = false,
+  structuredDataType = 'Organization',
+  structuredData
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      keywords={keywords}
+      image={image}
+      canonical={canonical}
+      noindex={noindex}
+    />
+  </head>
+  
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    
+    <main class="flex-grow">
+      <slot />
+    </main>
+    
+    <Footer />
+    
+    <StructuredData type={structuredDataType} data={structuredData} />
+    
+    <!-- Google Analytics with Partytown -->
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+  </body>
+</html>

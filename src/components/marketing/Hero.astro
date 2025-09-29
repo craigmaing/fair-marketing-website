@@ -1,0 +1,114 @@
+---
+import { brand } from '../../lib/brand';
+
+export interface Props {
+  headline?: string;
+  subheadline?: string;
+  ctaText?: string;
+  ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
+  showStats?: boolean;
+}
+
+const {
+  headline = brand.messaging.headlines.main,
+  subheadline = brand.messaging.headlines.sub,
+  ctaText = 'Get Your Free Competitor Analysis',
+  ctaHref = '/contact',
+  secondaryCtaText = 'View Our Pricing',
+  secondaryCtaHref = '/pricing',
+  showStats = true
+} = Astro.props;
+
+const stats = [
+  { value: '95+', label: 'Lighthouse Score' },
+  { value: '< 2s', label: 'Load Time' },
+  { value: '4x', label: 'ROI Average' },
+  { value: '100%', label: 'Transparent' }
+];
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50 py-20 lg:py-32">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-5">
+    <img 
+      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&auto=format" 
+      alt="Team collaboration background" 
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+  </div>
+  <!-- Background Pattern Overlay -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%231e3a8a" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center px-4 py-2 bg-[var(--warning)]/10 rounded-full mb-6">
+        <span class="w-2 h-2 bg-[var(--warning)] rounded-full mr-2 animate-pulse"></span>
+        <span class="text-sm font-medium text-[var(--warning)]">Fair Pricing • No Hidden Fees</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6 animate-fadeInUp">
+        <span class="block">{headline}</span>
+        <span class="block mt-2 text-gradient">{subheadline}</span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-xl text-[var(--text-secondary)] mb-8 max-w-2xl mx-auto animate-fadeInUp" style="animation-delay: 0.1s">
+        We show you exactly what your competitors are doing, how we'll beat them, and charge you fairly in 4 transparent payments. No BS, just results.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp" style="animation-delay: 0.2s">
+        <a href={ctaHref} class="btn btn-primary group">
+          <span>{ctaText}</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href={secondaryCtaHref} class="btn btn-secondary">
+          {secondaryCtaText}
+        </a>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 text-sm text-[var(--text-secondary)] animate-fadeInUp" style="animation-delay: 0.3s">
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-[var(--accent)] mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Free Competitor Analysis</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-[var(--accent)] mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>4-Payment Structure</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-[var(--accent)] mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span>Fair Business Practices</span>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      {showStats && (
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.4s">
+          {stats.map((stat) => (
+            <div class="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-soft">
+              <div class="text-2xl md:text-3xl font-bold text-[var(--primary)]">{stat.value}</div>
+              <div class="text-sm text-[var(--text-secondary)] mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
