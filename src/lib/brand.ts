@@ -1,17 +1,21 @@
-// Fearnbell Marketing Brand Configuration
+// Outcome Digital Marketing Ltd Brand Configuration
 
 export const brand = {
-  name: 'Fair Marketing',
-  tagline: 'Fair Marketing That Actually Works',
+  name: 'Outcome Digital Marketing Ltd',
+  shortName: 'Outcome Digital',
+  tagline: 'Marketing That Delivers Results',
   valueProposition: 'Transparent pricing, real results, ethical practices',
   
   colors: {
-    primary: '#1e3a8a',    // Trust blue
-    secondary: '#3b82f6',  // Bright blue  
-    accent: '#10b981',     // Success green
-    warning: '#f59e0b',    // Transparency amber
-    neutral: '#64748b',    // Professional gray
-    background: '#f8fafc', // Off-white
+    primary: '#2563eb',    // Vibrant blue - trust, digital, professional
+    secondary: '#7c3aed',  // Purple accent - innovation, creativity
+    accent: '#06b6d4',     // Cyan - modern, tech-forward
+    success: '#10b981',    // Green - results, growth
+    warning: '#f59e0b',    // Amber - attention
+    neutral: '#6b7280',    // Gray - balance
+    dark: '#111827',       // Near black - sophistication
+    light: '#f9fafb',      // Off-white - clean
+    background: '#ffffff', // Pure white
     text: {
       primary: '#0f172a',
       secondary: '#475569',
@@ -20,16 +24,16 @@ export const brand = {
   },
   
   typography: {
-    heading: 'Inter, system-ui, sans-serif',
+    heading: 'Poppins, Inter, system-ui, sans-serif',
     body: 'Inter, system-ui, sans-serif',
-    accent: 'Montserrat, sans-serif'
+    accent: 'Poppins, sans-serif'
   },
   
   messaging: {
     headlines: {
-      main: 'The Only Marketing Agency That Shows You Exactly How We\'ll Beat Your Competitors',
-      sub: 'And Charges Fairly For It',
-      cta: 'Start Your Project Today'
+      main: 'Transform Your Digital Presence Into Measurable Business Outcomes',
+      sub: 'Strategic Marketing That Delivers Real Results',
+      cta: 'Get Your Free Strategy Call'
     },
     
     benefits: [
@@ -66,24 +70,24 @@ export const brand = {
   },
   
   contact: {
-    email: 'hello@fairmarketing.com',
+    email: 'hello@outcomedigital.co.uk',
     phone: '+44 20 1234 5678',
     address: 'London, United Kingdom',
     social: {
-      twitter: '@fairmarketinguk',
-      linkedin: 'fair-marketing',
-      github: 'fair-marketing'
+      twitter: '@outcomedigital',
+      linkedin: 'outcome-digital-marketing',
+      github: 'outcome-digital'
     }
   }
 }
 
 export const seoDefaults = {
-  titleTemplate: '%s | Fair Marketing',
-  defaultTitle: 'Fair Marketing - Fair Marketing That Actually Works',
-  defaultDescription: 'The only marketing agency that shows you exactly how we\'ll beat your competitors - and charges fairly for it. Transparent pricing, real results, ethical practices.',
+  titleTemplate: '%s | Outcome Digital Marketing',
+  defaultTitle: 'Outcome Digital Marketing - Marketing That Delivers Results',
+  defaultDescription: 'Transform your digital presence into measurable business outcomes. Transparent pricing, real results, ethical practices.',
   defaultKeywords: [
-    'fair marketing',
-    'fair marketing agency',
+    'outcome digital marketing',
+    'digital marketing agency',
     'transparent pricing marketing',
     'ethical seo services',
     'website development agency',
@@ -94,11 +98,11 @@ export const seoDefaults = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    siteName: 'Fair Marketing'
+    siteName: 'Outcome Digital Marketing'
   },
   twitter: {
-    handle: '@fairmarketinguk',
-    site: '@fairmarketinguk',
+    handle: '@outcomedigital',
+    site: '@outcomedigital',
     cardType: 'summary_large_image'
   }
 }

@@ -28,7 +28,7 @@ const blogPosts = [
   }
 ];
 
-const pageTitle = 'Marketing Blog & Resources | Fearnbell Marketing';
+const pageTitle = 'Marketing Blog & Resources | Outcome Digital Marketing';
 const pageDescription = 'Free marketing insights, SEO tips, and web development guides. Learn how to grow your business with ethical, effective digital marketing.';
 const pageKeywords = ['marketing blog', 'SEO tips', 'web development guides', 'digital marketing insights'];
 ---
@@ -41,10 +41,14 @@ const pageKeywords = ['marketing blog', 'SEO tips', 'web development guides', 'd
   <!-- Hero Section -->
   <section class="relative bg-gradient-to-br from-green-50 to-white py-20 overflow-hidden">
     <div class="absolute inset-0 opacity-5">
-      <img 
-        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&h=1080&fit=crop&auto=format" 
-        alt="Blog and resources" 
+      <img
+        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&h=1080&fit=crop&auto=format"
+        alt="Blog and resources"
         class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        loading="eager"
+        decoding="async"
       />
     </div>
     <div class="container mx-auto px-4 relative z-10">
@@ -73,11 +77,14 @@ const pageKeywords = ['marketing blog', 'SEO tips', 'web development guides', 'd
             return (
             <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div class="h-48 relative">
-                <img 
-                  src={images[index]} 
+                <img
+                  src={images[index]}
                   alt={post.title}
                   class="w-full h-full object-cover"
+                  width="800"
+                  height="450"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="p-6">

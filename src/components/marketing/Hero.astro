@@ -1,5 +1,6 @@
 ---
 import { brand } from '../../lib/brand';
+import { Image } from 'astro:assets';
 
 export interface Props {
   headline?: string;
@@ -32,11 +33,14 @@ const stats = [
 <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50 py-20 lg:py-32">
   <!-- Background Image -->
   <div class="absolute inset-0 opacity-5">
-    <img 
-      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&auto=format" 
-      alt="Team collaboration background" 
+    <img
+      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&h=1080&fit=crop&auto=format"
+      alt="Team collaboration background"
       class="w-full h-full object-cover"
+      width="1920"
+      height="1080"
       loading="eager"
+      decoding="async"
     />
   </div>
   <!-- Background Pattern Overlay -->

@@ -1,5 +1,6 @@
 ---
 import { brand } from '../../lib/brand';
+import OutcomeLogo from './OutcomeLogo.astro';
 
 const currentYear = new Date().getFullYear();
 
@@ -31,14 +32,8 @@ const footerLinks = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
       <!-- Brand Section -->
       <div class="lg:col-span-2">
-        <div class="flex items-center space-x-2 mb-4">
-          <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-xl">F</span>
-          </div>
-          <div>
-            <span class="font-bold text-xl">Fearnbell</span>
-            <span class="text-xs block opacity-80 -mt-1">Marketing</span>
-          </div>
+        <div class="mb-4">
+          <OutcomeLogo variant="horizontal" size="md" className="brightness-0 invert" />
         </div>
         <p class="text-white/80 mb-4 max-w-sm">
           {brand.tagline}
@@ -137,7 +132,7 @@ const footerLinks = {
           © {currentYear} {brand.name}. All rights reserved.
         </p>
         <div class="flex items-center space-x-4 text-sm text-white/60">
-          <span>Fair Marketing That Actually Works</span>
+          <span>{brand.tagline}</span>
           <span class="hidden md:inline">•</span>
           <span>Built with Astro & Tailwind</span>
         </div>

@@ -7,7 +7,7 @@ export interface Props {
   keywords?: string;
 }
 
-const { title, description = "Fair Pricing Marketing Agency - Transparent costs, real results, no hidden fees", keywords = "fair pricing marketing agency, transparent marketing, ethical marketing london" } = Astro.props;
+const { title, description = "Outcome Digital Marketing - Transparent costs, real results, no hidden fees", keywords = "outcome digital marketing, transparent marketing, ethical marketing london" } = Astro.props;
 
 const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
 ---
@@ -23,31 +23,131 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
-    <title>{title} | Fair Marketing</title>
+    <title>{title} | Outcome Digital Marketing</title>
     <link rel="canonical" href={canonicalURL} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Fair Marketing" />
+    <meta name="author" content="Outcome Digital Marketing Ltd" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={`${title} | Fair Marketing`} />
+    <meta property="og:title" content={`${title} | Outcome Digital Marketing`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content="Fair Marketing" />
+    <meta property="og:site_name" content="Outcome Digital Marketing" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${title} | Fair Marketing`} />
+    <meta name="twitter:title" content={`${title} | Outcome Digital Marketing`} />
     <meta name="twitter:description" content={description} />
     
-    <!-- Fonts -->
+    <!-- Critical CSS Inline for Above-the-Fold Content -->
+    <style>
+      /* Critical above-the-fold styles */
+      :root {
+        --primary: #1e3a8a;
+        --secondary: #3b82f6;
+        --accent: #10b981;
+        --warning: #f59e0b;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --bg-light: #f8fafc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: 'Inter', system-ui, sans-serif;
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #fff;
+        color: var(--text-primary);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Critical hero styles */
+      .text-gradient {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      /* Prevent layout shift */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Critical animation for initial load */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fadeInUp {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+    </style>
+
+    <!-- Fonts (Preload critical font weights) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
     <!-- Tailwind CSS is handled by Astro's built-in integration -->
     
     <!-- Schema.org LocalBusiness -->
@@ -55,10 +155,10 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Fair Marketing",
-      "description": "Fair pricing marketing agency with transparent costs and ethical practices",
-      "url": "https://fairmarketing.com",
-      "telephone": "+44-20-XXXX-XXXX",
+      "name": "Outcome Digital Marketing Ltd",
+      "description": "Digital marketing agency with transparent costs and ethical practices",
+      "url": "https://outcomedigital.co.uk",
+      "telephone": "+44-789-012-3456",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "London",
@@ -69,7 +169,7 @@ const canonicalURL = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astr
       "additionalType": "https://schema.org/MarketingCompany",
       "specialty": [
         "Transparent Pricing",
-        "Fair Payment Terms", 
+        "Fair Payment Terms",
         "Ethical Marketing Practices",
         "Small Business Marketing"
       ]
