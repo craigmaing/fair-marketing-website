@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+.astro/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.production.local
+.env.development.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Test files
+test-*.js
+*-test.js
+*.test.js
+quick-*.js
+deep-*.js
+
+# Research and data files
+*.json
+!package.json
+!tsconfig.json
+!astro.config.json
+
+# Scripts and batch files
+*.bat
+*.sh
+
+# Temporary and backup files
+*.tmp
+*.bak
+*.backup
+nul
+
+# MCP servers (these should be managed separately)
+dataforseo-mcp-server/
+figma-mcp/
+lighthouse-mentoring/
+
+# Marketing sites (separate repositories)
+fearnbell-marketing/
+fearnbell-marketing-website/
+website/
+
+# Examples and configs
+examples/
+claude-desktop-config.json
+vscode-mcp-settings.json
+
+# Scripts folder
+scripts/
+
+# Site snapshots
+site-snapshots/
+
+# Claude configuration (personal)
+.claude/
+CLAUDE.MD
