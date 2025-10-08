@@ -34,6 +34,9 @@ async function main() {
     version: "1.0.0",
   });
 
+  // Attach API client to server for tool handlers
+  (server as unknown as { apiClient?: ReturnType<typeof setupApiClient> }).apiClient = apiClient;
+
   // Register tools for each DataForSEO API category
   registerSerpTools(server, apiClient);
   registerKeywordsTools(server, apiClient);

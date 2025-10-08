@@ -75,6 +75,13 @@ export DATAFORSEO_PASSWORD="your_password"
 npm start
 ```
 
+### MCP Client Example (stdio)
+
+You can connect to the server using any MCP client over stdio. A minimal Node client example is provided in `examples/basic-usage.ts` which:
+- spawns `node dist/index.js` with your env vars
+- connects via `@modelcontextprotocol/sdk` stdio client
+- calls a couple of tools and prints results
+
 ### Running the Server with DataForSEO and Local Falcon
 
 ```bash
@@ -101,6 +108,8 @@ See the examples directory for usage examples.
 # Run in development mode with hot reloading
 npm run dev
 ```
+
+Note: This repository contains a nested folder `dataforseo-mcp-server/` with a variant of the server. The root package is the primary, actively built target; the nested folder remains for reference and compatibility. Use the root `package.json` scripts for building and running.
 
 ## Examples
 

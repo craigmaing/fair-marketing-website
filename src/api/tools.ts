@@ -5,19 +5,39 @@ import { DataForSeoClient } from "./client.js";
 /**
  * Base helper function to register an MCP tool for DataForSEO API
  */
-export function registerTool<T extends z.ZodRawShape>(
+export function registerTool(
   server: McpServer,
   name: string,
-  schema: T,
-  handler: (params: z.infer<z.ZodObject<T>>, client: DataForSeoClient) => Promise<any>
+  schema: z.ZodTypeAny | Record<string, any>,
+  handler: (params: any, client: DataForSeoClient) => Promise<any>
 ) {
+  // Normalize to ZodRawShape for the MCP SDK (expects a shape, not a ZodObject)
+  const shape: z.ZodRawShape = (() => {
+    const anySchema = schema as any;
+    // ZodObject exposes shape via _def.shape() in Zod v3
+    if (anySchema?._def?.shape && typeof anySchema._def.shape === "function") {
+      return anySchema._def.shape();
+    }
+    // Some builds expose .shape directly
+    if (anySchema?.shape && typeof anySchema.shape === "object") {
+      return anySchema.shape as z.ZodRawShape;
+    }
+    // Assume raw shape was provided
+    return schema as z.ZodRawShape;
+  })();
+
   server.tool(
     name,
-    schema,
-    async (params, _context) => {
+    shape,
+    async (params: any, _context: any) => {
       try {
-        // We get the apiClient from the closure, not from context
-        const result = await handler(params as z.infer<z.ZodObject<T>>, _context.client as unknown as DataForSeoClient);
+        // Retrieve the API client attached to the server instance
+        const client = (server as unknown as { apiClient?: DataForSeoClient }).apiClient;
+        if (!client) {
+          throw new Error("DataForSEO API client not initialized on server");
+        }
+
+        const result = await handler(params, client);
         
         return {
           content: [
@@ -63,11 +83,11 @@ export function registerTool<T extends z.ZodRawShape>(
 /**
  * Helper for registering a task-based tool (POST, READY, GET pattern)
  */
-export function registerTaskTool<PostT extends z.ZodRawShape>(
+export function registerTaskTool(
   server: McpServer,
   baseName: string,
-  postSchema: PostT,
-  postHandler: (params: z.infer<z.ZodObject<PostT>>, client: DataForSeoClient) => Promise<any>,
+  postSchema: z.ZodTypeAny | Record<string, any>,
+  postHandler: (params: any, client: DataForSeoClient) => Promise<any>,
   readyHandler: (client: DataForSeoClient) => Promise<any>,
   getHandler: (id: string, client: DataForSeoClient) => Promise<any>
 ) {
@@ -83,7 +103,7 @@ export function registerTaskTool<PostT extends z.ZodRawShape>(
   registerTool(
     server,
     `${baseName}_ready`,
-    {},
+    z.object({}),
     (_params, client) => readyHandler(client)
   );
   
@@ -91,7 +111,7 @@ export function registerTaskTool<PostT extends z.ZodRawShape>(
   registerTool(
     server,
     `${baseName}_get`,
-    { id: z.string() },
+    z.object({ id: z.string() }),
     (params, client) => getHandler(params.id, client)
   );
 }
