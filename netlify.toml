@@ -1,0 +1,9 @@
+# Root netlify.toml - directs build to fearnbell-ultimate subdirectory
+
+[build]
+  base = "fearnbell-ultimate"
+  command = "npm run build"
+  publish = "fearnbell-ultimate/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
