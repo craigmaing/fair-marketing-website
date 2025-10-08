@@ -1,34 +1,17 @@
 {
-  "name": "dataforseo-mcp-server",
-  "version": "1.0.0",
-  "description": "A comprehensive stdio MCP server for DataForSEO API",
-  "main": "dist/index.js",
-  "private": true,
+  "name": "outcome-digital-marketing",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
-    "serve:site": "node scripts/serve-website.js",
-    "pw:install": "npx playwright install chromium",
-    "audit:site": "node scripts/audit-site.js"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [
-    "mcp",
-    "dataforseo",
-    "api",
-    "seo"
-  ],
-  "author": "",
-  "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.0",
-    "axios": "^1.11.0",
-    "zod": "^3.23.8"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.19",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "playwright": "^1.45.0"
+    "@astrojs/partytown": "^2.1.4",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.5",
+    "tailwindcss": "^4.1.12"
   }
 }

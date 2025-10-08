@@ -1,0 +1,485 @@
+---
+// Interactive Pricing Calculator for Outcome Digital Marketing - Modern redesign
+---
+
+<section id="pricing-calculator" class="py-24 bg-gradient-to-br from-white via-blue-50/30 to-emerald-50/30 relative overflow-hidden">
+  <!-- Background Enhancement -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, rgb(16,185,129) 1px, transparent 0); background-size: 32px 32px;"></div>
+  </div>
+  
+  <div class="container relative z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Enhanced Section Header -->
+      <div class="text-center mb-20">
+        <div class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-brand-emerald/20 to-brand-blue/20 backdrop-blur-sm text-brand-navy font-black text-lg rounded-full border-2 border-brand-emerald/30 mb-8 shadow-lg">
+          <svg class="w-6 h-6 mr-3 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Interactive Pricing Calculator
+        </div>
+        
+        <h2 class="text-5xl lg:text-6xl font-black text-neutral-900 mb-8 leading-tight">
+          Calculate Your <br/>
+          <span class="bg-gradient-to-r from-brand-navy via-brand-blue to-brand-emerald bg-clip-text text-transparent">
+            Exact Cost
+          </span>
+        </h2>
+        
+        <p class="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-4xl mx-auto font-light">
+          No surprises, no hidden fees, no "starting from" nonsense. Adjust your requirements and see your 
+          <strong class="text-brand-navy font-semibold">exact price instantly</strong>.
+        </p>
+        
+        <div class="w-24 h-1.5 bg-gradient-to-r from-brand-emerald to-brand-blue rounded-full mx-auto mt-8"></div>
+      </div>
+
+      <!-- Enhanced Calculator Card -->
+      <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+        <div class="grid lg:grid-cols-5 gap-0">
+          
+          <!-- Calculator Controls -->
+          <div class="lg:col-span-3 p-10 lg:p-12 bg-gradient-to-br from-white to-gray-50/50">
+            <div class="flex items-center mb-8">
+              <div class="w-12 h-12 bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold text-slate-900">
+                Tell us about your project
+              </h3>
+            </div>
+            
+            <div class="space-y-10">
+
+              <!-- Service Type -->
+              <div class="group">
+                <label class="block text-lg font-semibold text-slate-800 mb-4 flex items-center">
+                  <svg class="w-5 h-5 mr-2 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                  </svg>
+                  Service Type
+                </label>
+                <select 
+                  id="serviceType" 
+                  class="w-full px-6 py-4 border-2 border-slate-200 rounded-2xl focus:ring-4 focus:ring-brand-blue/20 focus:border-brand-blue transition-all duration-300 text-lg font-medium bg-white shadow-sm hover:shadow-md"
+                >
+                  <option value="starter">Starter Package (£2,000 base)</option>
+                  <option value="business">Business Package (£4,000 base)</option>
+                  <option value="premium">Premium Package (£8,000 base)</option>
+                  <option value="custom">Custom Solution (£12,000 base)</option>
+                </select>
+              </div>
+
+              <!-- Website Pages -->
+              <div class="group">
+                <label class="block text-lg font-semibold text-slate-800 mb-4 flex items-center justify-between">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2 text-brand-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Number of Pages
+                  </div>
+                  <span class="text-2xl font-black text-brand-emerald bg-brand-emerald/10 px-4 py-2 rounded-xl" id="pageCount">5</span>
+                </label>
+                
+                <div class="bg-gray-50 rounded-2xl p-6 border-2 border-gray-100">
+                  <input 
+                    type="range" 
+                    id="pages" 
+                    min="3" 
+                    max="25" 
+                    value="5" 
+                    class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                  />
+                  <div class="flex justify-between text-sm font-medium text-slate-600 mt-4">
+                    <span class="bg-white px-3 py-1 rounded-full shadow-sm">3 pages</span>
+                    <span class="bg-white px-3 py-1 rounded-full shadow-sm">25+ pages</span>
+                  </div>
+                </div>
+                
+                <div class="text-sm text-slate-500 mt-2 text-center">
+                  <span class="font-medium">£150 per additional page</span> beyond base package
+                </div>
+              </div>
+
+            <!-- SEO Package -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-3">
+                SEO Package
+              </label>
+              <div class="space-y-3">
+                <label class="flex items-center">
+                  <input type="radio" name="seo" value="basic" checked class="text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-slate-700">Basic SEO (+£0)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="seo" value="advanced" class="text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-slate-700">Advanced SEO (+£500)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="seo" value="premium" class="text-blue-600 focus:ring-blue-500">
+                  <span class="ml-2 text-slate-700">Premium SEO (+£1000)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div>
+              <label class="block text-sm font-medium text-slate-700 mb-3">
+                Additional Services
+              </label>
+              <div class="space-y-3">
+                <label class="flex items-center">
+                  <input type="checkbox" id="competitors" class="text-blue-600 focus:ring-blue-500 rounded">
+                  <span class="ml-2 text-slate-700">Competitor Analysis (+£300)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" id="content" class="text-blue-600 focus:ring-blue-500 rounded">
+                  <span class="ml-2 text-slate-700">Content Creation (+£400)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" id="social" class="text-blue-600 focus:ring-blue-500 rounded">
+                  <span class="ml-2 text-slate-700">Social Media Setup (+£250)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" id="analytics" class="text-blue-600 focus:ring-blue-500 rounded">
+                  <span class="ml-2 text-slate-700">Analytics Dashboard (+£200)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Price Display -->
+          <div class="lg:col-span-2 bg-gradient-to-br from-slate-900 via-brand-navy to-brand-blue p-8 lg:p-10 text-white relative overflow-hidden">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
+            
+            <div class="relative z-10 h-full flex flex-col">
+              <div class="flex items-center mb-8">
+                <div class="w-12 h-12 bg-gradient-to-r from-brand-emerald to-yellow-400 rounded-2xl flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-slate-900" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                    <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-3xl font-bold">
+                  Your Investment
+                </h3>
+              </div>
+
+              <!-- Enhanced Total Price -->
+              <div class="text-center mb-12 bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+                <div class="text-6xl lg:text-7xl font-black mb-3 text-yellow-300">
+                  £<span id="totalPrice">2000</span>
+                </div>
+                <p class="text-white/80 text-xl font-medium">Total project cost</p>
+                <div class="mt-4 inline-flex items-center px-4 py-2 bg-brand-emerald/20 text-brand-emerald backdrop-blur-sm rounded-full border border-brand-emerald/30">
+                  <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="font-bold text-sm">100% Fixed Price</span>
+                </div>
+              </div>
+
+              <!-- Enhanced Payment Breakdown -->
+              <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 mb-10 border border-white/30">
+                <h4 class="font-black text-slate-900 mb-6 flex items-center text-xl">
+                  <svg class="w-6 h-6 mr-3 text-brand-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Fair 4-Payment Plan
+                </h4>
+                <div class="space-y-4">
+                  <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                    <div class="flex items-center">
+                      <div class="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">1</div>
+                      <span class="text-slate-700 font-medium">Project Start (25%)</span>
+                    </div>
+                    <span class="font-black text-slate-900 text-lg">£<span id="payment1">500</span></span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                    <div class="flex items-center">
+                      <div class="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">2</div>
+                      <span class="text-slate-700 font-medium">Month 2 (25%)</span>
+                    </div>
+                    <span class="font-black text-slate-900 text-lg">£<span id="payment2">500</span></span>
+                  </div>
+                  <div class="flex justify-between items-center py-3 border-b border-gray-100">
+                    <div class="flex items-center">
+                      <div class="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">3</div>
+                      <span class="text-slate-700 font-medium">Month 3 (25%)</span>
+                    </div>
+                    <span class="font-black text-slate-900 text-lg">£<span id="payment3">500</span></span>
+                  </div>
+                  <div class="flex justify-between items-center pt-4 bg-brand-emerald/10 -mx-4 px-4 py-3 rounded-xl">
+                    <div class="flex items-center">
+                      <div class="w-8 h-8 bg-brand-emerald rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">✓</div>
+                      <span class="text-brand-emerald font-bold">Final Payment (25%)</span>
+                    </div>
+                    <span class="font-black text-brand-emerald text-xl">£<span id="payment4">500</span></span>
+                  </div>
+                </div>
+              </div>
+
+            <!-- What's Included -->
+            <div class="mb-8">
+              <h4 class="font-bold text-slate-900 mb-3">What's Included:</h4>
+              <ul id="includedFeatures" class="space-y-2 text-sm text-slate-600">
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Responsive Website Design
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  Basic SEO Setup
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                  </svg>
+                  30-day Support Period
+                </li>
+              </ul>
+            </div>
+
+              <!-- Enhanced CTA Section -->
+              <div class="mt-auto">
+                <button 
+                  class="group w-full bg-gradient-to-r from-yellow-400 to-brand-emerald text-slate-900 font-black py-5 px-8 rounded-2xl hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300 text-xl mb-4 transform hover:scale-105"
+                  onclick="openQuoteForm()"
+                >
+                  <span class="group-hover:mr-2 transition-all duration-300">Get Your Quote Now</span>
+                  <svg class="w-6 h-6 inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </button>
+                
+                <div class="text-center">
+                  <div class="flex items-center justify-center space-x-6 text-sm text-white/80">
+                    <div class="flex items-center">
+                      <svg class="w-4 h-4 mr-2 text-brand-emerald" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      No hidden fees
+                    </div>
+                    <div class="flex items-center">
+                      <svg class="w-4 h-4 mr-2 text-brand-emerald" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      Fair terms
+                    </div>
+                    <div class="flex items-center">
+                      <svg class="w-4 h-4 mr-2 text-brand-emerald" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      100% transparent
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="mt-12 text-center">
+        <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-600">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 mr-2 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            No Surprise Fees
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 mr-2 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Fixed Price Promise
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 mr-2 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+            </svg>
+            Fair Payment Terms
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Pricing Calculator Logic
+  document.addEventListener('DOMContentLoaded', function() {
+    const serviceType = document.getElementById('serviceType');
+    const pagesSlider = document.getElementById('pages');
+    const pageCount = document.getElementById('pageCount');
+    const totalPrice = document.getElementById('totalPrice');
+    const payment1 = document.getElementById('payment1');
+    const payment2 = document.getElementById('payment2');
+    const payment3 = document.getElementById('payment3');
+    const payment4 = document.getElementById('payment4');
+    const includedFeatures = document.getElementById('includedFeatures');
+    
+    // Base prices
+    const basePrices = {
+      starter: 2000,
+      business: 4000,
+      premium: 8000,
+      custom: 12000
+    };
+    
+    // Service features
+    const serviceFeatures = {
+      starter: [
+        'Responsive Website Design',
+        'Basic SEO Setup',
+        '30-day Support Period',
+        'Contact Form Integration',
+        'Google Analytics Setup'
+      ],
+      business: [
+        'Professional Website Design',
+        'Advanced SEO Strategy',
+        '90-day Support Period',
+        'CMS Integration',
+        'Performance Optimization',
+        'Social Media Integration',
+        'Monthly Reports'
+      ],
+      premium: [
+        'Custom Website Design',
+        'Premium SEO Campaign',
+        '6-month Support Period',
+        'Advanced CMS',
+        'E-commerce Integration',
+        'Marketing Automation',
+        'Weekly Performance Reports',
+        'Dedicated Account Manager'
+      ],
+      custom: [
+        'Fully Custom Solution',
+        'Enterprise SEO Strategy',
+        '12-month Support Period',
+        'Custom Integrations',
+        'Advanced Analytics',
+        'Marketing Automation',
+        'Real-time Reporting',
+        'Dedicated Team'
+      ]
+    };
+
+    function calculatePrice() {
+      const service = serviceType.value;
+      const pages = parseInt(pagesSlider.value);
+      let basePrice = basePrices[service];
+      
+      // Page multiplier (pages above/below 5 base pages get charged extra/discount)
+      let basePages = 5; // All services start with 5-page base
+      if (pages !== basePages) {
+        basePrice += (pages - basePages) * 150; // £150 per page difference
+      }
+      
+      // SEO addon
+      const seoType = document.querySelector('input[name="seo"]:checked').value;
+      const seoPrice = seoType === 'advanced' ? 500 : seoType === 'premium' ? 1000 : 0;
+      basePrice += seoPrice;
+      
+      // Additional services
+      const competitors = document.getElementById('competitors').checked ? 300 : 0;
+      const content = document.getElementById('content').checked ? 400 : 0;
+      const social = document.getElementById('social').checked ? 250 : 0;
+      const analytics = document.getElementById('analytics').checked ? 200 : 0;
+      
+      basePrice += competitors + content + social + analytics;
+      
+      return basePrice;
+    }
+    
+    function updateDisplay() {
+      const price = calculatePrice();
+      const quarterPayment = Math.round(price / 4);
+      
+      totalPrice.textContent = price.toString();
+      payment1.textContent = quarterPayment.toString();
+      payment2.textContent = quarterPayment.toString();
+      payment3.textContent = quarterPayment.toString();
+      payment4.textContent = quarterPayment.toString();
+      
+      // Update features list
+      const service = serviceType.value;
+      const features = serviceFeatures[service];
+      includedFeatures.innerHTML = features.map(feature => `
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mr-2 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          ${feature}
+        </li>
+      `).join('');
+    }
+    
+    function updatePageCount() {
+      pageCount.textContent = pagesSlider.value;
+      updateDisplay();
+    }
+    
+    // Event listeners
+    serviceType.addEventListener('change', updateDisplay);
+    pagesSlider.addEventListener('input', updatePageCount);
+    
+    // Add event listeners for all form elements
+    document.querySelectorAll('input[name="seo"]').forEach(radio => {
+      radio.addEventListener('change', updateDisplay);
+    });
+    
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', updateDisplay);
+    });
+    
+    // Initialize display
+    updateDisplay();
+  });
+  
+  function openQuoteForm() {
+    // This would open a modal or navigate to contact form
+    // For now, let's redirect to contact page
+    window.location.href = '/contact?calculator=true';
+  }
+</script>
+
+<style>
+  /* Custom slider styling */
+  .slider {
+    background: linear-gradient(to right, #3b82f6 0%, #3b82f6 40%, #e2e8f0 40%, #e2e8f0 100%);
+  }
+  
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .slider::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+</style>

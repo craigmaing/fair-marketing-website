@@ -1,0 +1,464 @@
+---
+// Fully functional pricing calculator with Site 1's clean Tailwind styling
+---
+
+<div class="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto" id="pricing-calculator">
+  <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Calculate Your Project Cost</h3>
+  
+  <!-- Service Type Selection -->
+  <div class="mb-8">
+    <label class="block text-sm font-semibold text-gray-700 mb-3">Service Type</label>
+    <div class="grid md:grid-cols-3 gap-4">
+      <button class="service-type-btn p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" data-price="2000">
+        <div class="text-lg font-bold mb-1">Starter Website</div>
+        <div class="text-sm text-gray-600">5 pages, basic SEO</div>
+        <div class="text-2xl font-bold text-blue-600 mt-2">£2,000</div>
+      </button>
+      <button class="service-type-btn p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" data-price="4000">
+        <div class="text-lg font-bold mb-1">Business Package</div>
+        <div class="text-sm text-gray-600">10 pages, advanced SEO</div>
+        <div class="text-2xl font-bold text-blue-600 mt-2">£4,000</div>
+      </button>
+      <button class="service-type-btn p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" data-price="8000">
+        <div class="text-lg font-bold mb-1">Premium Package</div>
+        <div class="text-sm text-gray-600">Custom solution</div>
+        <div class="text-2xl font-bold text-blue-600 mt-2">£8,000+</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Pages Slider -->
+  <div class="mb-8">
+    <label class="block text-sm font-semibold text-gray-700 mb-3">
+      Number of Pages: <span id="page-count" class="text-blue-600 font-bold text-lg">5</span>
+    </label>
+    <input 
+      type="range" 
+      id="pages-slider" 
+      min="1" 
+      max="50" 
+      value="5" 
+      class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+    >
+    <div class="flex justify-between text-xs text-gray-500 mt-1">
+      <span>1 page</span>
+      <span>25 pages</span>
+      <span>50 pages</span>
+    </div>
+    <div class="text-sm text-gray-600 mt-2 text-center">
+      Additional pages: <span class="font-semibold">£150 each</span>
+    </div>
+  </div>
+
+  <!-- SEO Package -->
+  <div class="mb-8">
+    <label class="block text-sm font-semibold text-gray-700 mb-3">SEO Package</label>
+    <div class="grid md:grid-cols-3 gap-4">
+      <label class="seo-option cursor-pointer">
+        <input type="radio" name="seo" value="0" class="sr-only" checked>
+        <div class="p-4 border-2 border-gray-200 rounded-lg hover:border-green-500 transition-colors seo-card">
+          <div class="font-semibold mb-1">Basic SEO</div>
+          <div class="text-sm text-gray-600">On-page optimization</div>
+          <div class="text-green-600 font-bold mt-2">Included</div>
+        </div>
+      </label>
+      <label class="seo-option cursor-pointer">
+        <input type="radio" name="seo" value="500" class="sr-only">
+        <div class="p-4 border-2 border-gray-200 rounded-lg hover:border-green-500 transition-colors seo-card">
+          <div class="font-semibold mb-1">Advanced SEO</div>
+          <div class="text-sm text-gray-600">+ Competitor analysis</div>
+          <div class="text-green-600 font-bold mt-2">+£500</div>
+        </div>
+      </label>
+      <label class="seo-option cursor-pointer">
+        <input type="radio" name="seo" value="1500" class="sr-only">
+        <div class="p-4 border-2 border-gray-200 rounded-lg hover:border-green-500 transition-colors seo-card">
+          <div class="font-semibold mb-1">Premium SEO</div>
+          <div class="text-sm text-gray-600">Full campaign</div>
+          <div class="text-green-600 font-bold mt-2">+£1,500</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Additional Services -->
+  <div class="mb-8">
+    <label class="block text-sm font-semibold text-gray-700 mb-3">Additional Services</label>
+    <div class="space-y-3">
+      <label class="flex items-center cursor-pointer hover:bg-gray-50 p-3 rounded-lg transition-colors">
+        <input type="checkbox" class="addon-service w-5 h-5 text-blue-600 rounded focus:ring-blue-500 mr-3" data-price="1000">
+        <span class="flex-1">E-commerce functionality</span>
+        <span class="text-gray-600 font-semibold">+£1,000</span>
+      </label>
+      <label class="flex items-center cursor-pointer hover:bg-gray-50 p-3 rounded-lg transition-colors">
+        <input type="checkbox" class="addon-service w-5 h-5 text-blue-600 rounded focus:ring-blue-500 mr-3" data-price="500">
+        <span class="flex-1">Blog/CMS setup</span>
+        <span class="text-gray-600 font-semibold">+£500</span>
+      </label>
+      <label class="flex items-center cursor-pointer hover:bg-gray-50 p-3 rounded-lg transition-colors">
+        <input type="checkbox" class="addon-service w-5 h-5 text-blue-600 rounded focus:ring-blue-500 mr-3" data-price="750">
+        <span class="flex-1">Email marketing integration</span>
+        <span class="text-gray-600 font-semibold">+£750</span>
+      </label>
+      <label class="flex items-center cursor-pointer hover:bg-gray-50 p-3 rounded-lg transition-colors">
+        <input type="checkbox" class="addon-service w-5 h-5 text-blue-600 rounded focus:ring-blue-500 mr-3" data-price="300">
+        <span class="flex-1">Social media integration</span>
+        <span class="text-gray-600 font-semibold">+£300</span>
+      </label>
+      <label class="flex items-center cursor-pointer hover:bg-gray-50 p-3 rounded-lg transition-colors">
+        <input type="checkbox" class="addon-service w-5 h-5 text-blue-600 rounded focus:ring-blue-500 mr-3" data-price="400">
+        <span class="flex-1">Analytics & reporting dashboard</span>
+        <span class="text-gray-600 font-semibold">+£400</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="mb-8">
+    <label class="block text-sm font-semibold text-gray-700 mb-3">Project Timeline</label>
+    <div class="grid md:grid-cols-3 gap-4">
+      <label class="timeline-option cursor-pointer">
+        <input type="radio" name="timeline" value="1.5" class="sr-only">
+        <div class="p-4 border-2 border-gray-200 rounded-lg hover:border-orange-500 transition-colors timeline-card">
+          <div class="font-semibold mb-1">Rush (2 weeks)</div>
+          <div class="text-sm text-gray-600">Fast delivery</div>
+          <div class="text-orange-600 font-bold mt-2">+50% cost</div>
+        </div>
+      </label>
+      <label class="timeline-option cursor-pointer">
+        <input type="radio" name="timeline" value="1" class="sr-only" checked>
+        <div class="p-4 border-2 border-gray-200 rounded-lg hover:border-blue-500 transition-colors timeline-card">
+          <div class="font-semibold mb-1">Standard (4 weeks)</div>
+          <div class="text-sm text-gray-600">Recommended</div>
+          <div class="text-blue-600 font-bold mt-2">Normal price</div>
+        </div>
+      </label>
+      <label class="timeline-option cursor-pointer">
+        <input type="radio" name="timeline" value="0.9" class="sr-only">
+        <div class="p-4 border-2 border-gray-200 rounded-lg hover:border-green-500 transition-colors timeline-card">
+          <div class="font-semibold mb-1">Flexible (6-8 weeks)</div>
+          <div class="text-sm text-gray-600">Save money</div>
+          <div class="text-green-600 font-bold mt-2">-10% discount</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Price Display -->
+  <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-6 mb-6">
+    <div class="text-center">
+      <div class="text-sm text-gray-600 mb-2">Total Project Cost</div>
+      <div class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600" id="total-price">
+        £2,000
+      </div>
+      <div class="text-sm text-gray-500 mt-2">100% transparent pricing • No hidden fees</div>
+    </div>
+    
+    <!-- 4-Payment Breakdown -->
+    <div class="mt-6 p-4 bg-white/80 rounded-lg">
+      <div class="text-sm font-semibold text-gray-700 mb-3">Fair 4-Payment Plan:</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="text-center p-3 bg-gray-50 rounded-lg">
+          <div class="text-xs text-gray-500 mb-1">Month 1</div>
+          <div class="font-bold text-blue-600 text-lg" id="payment-1">£500</div>
+          <div class="text-xs text-gray-400">25%</div>
+        </div>
+        <div class="text-center p-3 bg-gray-50 rounded-lg">
+          <div class="text-xs text-gray-500 mb-1">Month 2</div>
+          <div class="font-bold text-blue-600 text-lg" id="payment-2">£500</div>
+          <div class="text-xs text-gray-400">25%</div>
+        </div>
+        <div class="text-center p-3 bg-gray-50 rounded-lg">
+          <div class="text-xs text-gray-500 mb-1">Month 3</div>
+          <div class="font-bold text-blue-600 text-lg" id="payment-3">£500</div>
+          <div class="text-xs text-gray-400">25%</div>
+        </div>
+        <div class="text-center p-3 bg-green-50 rounded-lg">
+          <div class="text-xs text-gray-500 mb-1">Month 4</div>
+          <div class="font-bold text-green-600 text-lg" id="payment-4">£500</div>
+          <div class="text-xs text-gray-400">Final 25%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- What's Included -->
+  <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+    <h4 class="font-semibold text-gray-700 mb-3">What's Included:</h4>
+    <div id="included-features" class="grid md:grid-cols-2 gap-2 text-sm">
+      <div class="flex items-center">
+        <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+        <span>Responsive website design</span>
+      </div>
+      <div class="flex items-center">
+        <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+        <span>Basic SEO setup</span>
+      </div>
+      <div class="flex items-center">
+        <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+        <span>30-day support period</span>
+      </div>
+      <div class="flex items-center">
+        <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+        <span>Mobile optimization</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Buttons -->
+  <div class="flex flex-col sm:flex-row gap-4">
+    <button id="get-started-btn" class="flex-1 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+      Get Started with This Package
+    </button>
+    <button id="consultation-btn" class="flex-1 px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+      Schedule Free Consultation
+    </button>
+  </div>
+</div>
+
+<style>
+  /* Custom range slider styling */
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  /* Active state for buttons */
+  .service-type-btn.active {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+  
+  .seo-option input:checked + .seo-card {
+    border-color: #10b981;
+    background-color: #f0fdf4;
+  }
+  
+  .timeline-option input:checked + .timeline-card {
+    border-color: #3b82f6;
+    background-color: #eff6ff;
+  }
+</style>
+
+<script>
+  // Initialize calculator when DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    let basePrice = 2000;
+    let pageCount = 5;
+    let seoPrice = 0;
+    let addonsTotal = 0;
+    let timelineMultiplier = 1;
+    
+    const features = {
+      starter: [
+        'Responsive website design',
+        'Basic SEO setup',
+        '30-day support period',
+        'Mobile optimization',
+        'Contact form integration',
+        'Google Analytics setup'
+      ],
+      business: [
+        'Professional website design',
+        'Advanced SEO strategy',
+        '90-day support period', 
+        'Mobile & tablet optimization',
+        'CMS integration',
+        'Social media integration',
+        'Performance optimization',
+        'Monthly reporting'
+      ],
+      premium: [
+        'Custom website design',
+        'Premium SEO campaign',
+        '6-month support period',
+        'Full responsive design',
+        'Advanced CMS features',
+        'E-commerce ready',
+        'Marketing automation',
+        'Weekly reporting',
+        'Priority support'
+      ]
+    };
+    
+    // Service type selection
+    const serviceButtons = document.querySelectorAll('.service-type-btn');
+    serviceButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        serviceButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        basePrice = parseInt(this.dataset.price);
+        
+        // Update features based on service type
+        let serviceType = 'starter';
+        if (basePrice === 4000) serviceType = 'business';
+        else if (basePrice === 8000) serviceType = 'premium';
+        
+        updateFeatures(serviceType);
+        updatePrice();
+      });
+    });
+    
+    // Set first service as active by default
+    if (serviceButtons.length > 0) {
+      serviceButtons[0].classList.add('active');
+    }
+    
+    // Pages slider
+    const pagesSlider = document.getElementById('pages-slider');
+    const pageCountDisplay = document.getElementById('page-count');
+    
+    if (pagesSlider) {
+      pagesSlider.addEventListener('input', function() {
+        pageCount = parseInt(this.value);
+        pageCountDisplay.textContent = pageCount;
+        
+        // Update slider background
+        const percentage = ((pageCount - 1) / 49) * 100;
+        this.style.background = `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${percentage}%, #e5e7eb ${percentage}%, #e5e7eb 100%)`;
+        
+        updatePrice();
+      });
+    }
+    
+    // SEO package selection
+    const seoOptions = document.querySelectorAll('input[name="seo"]');
+    seoOptions.forEach(option => {
+      option.addEventListener('change', function() {
+        seoPrice = parseInt(this.value);
+        updatePrice();
+      });
+    });
+    
+    // Additional services
+    const addonServices = document.querySelectorAll('.addon-service');
+    addonServices.forEach(addon => {
+      addon.addEventListener('change', function() {
+        const price = parseInt(this.dataset.price);
+        if (this.checked) {
+          addonsTotal += price;
+        } else {
+          addonsTotal -= price;
+        }
+        updatePrice();
+      });
+    });
+    
+    // Timeline selection
+    const timelineOptions = document.querySelectorAll('input[name="timeline"]');
+    timelineOptions.forEach(option => {
+      option.addEventListener('change', function() {
+        timelineMultiplier = parseFloat(this.value);
+        updatePrice();
+      });
+    });
+    
+    // Calculate and update price
+    function updatePrice() {
+      // Calculate base price with pages
+      let price = basePrice;
+      
+      // Add extra pages cost (£150 per page over base package)
+      const basePagesIncluded = basePrice === 2000 ? 5 : basePrice === 4000 ? 10 : 20;
+      if (pageCount > basePagesIncluded) {
+        price += (pageCount - basePagesIncluded) * 150;
+      }
+      
+      // Add SEO package
+      price += seoPrice;
+      
+      // Add additional services
+      price += addonsTotal;
+      
+      // Apply timeline multiplier
+      price = Math.round(price * timelineMultiplier);
+      
+      // Update display with animation
+      animateValue('total-price', price);
+      
+      // Update payment plan
+      const quarterPayment = Math.round(price / 4);
+      for (let i = 1; i <= 4; i++) {
+        const paymentElement = document.getElementById(`payment-${i}`);
+        if (paymentElement) {
+          paymentElement.textContent = `£${quarterPayment.toLocaleString()}`;
+        }
+      }
+    }
+    
+    // Animate price changes
+    function animateValue(id, value) {
+      const element = document.getElementById(id);
+      if (!element) return;
+      
+      const current = parseInt(element.textContent.replace(/[£,]/g, '')) || 0;
+      const duration = 300;
+      const steps = 20;
+      const increment = (value - current) / steps;
+      let step = 0;
+      
+      const timer = setInterval(() => {
+        step++;
+        const newValue = Math.round(current + increment * step);
+        element.textContent = `£${newValue.toLocaleString()}`;
+        
+        if (step >= steps) {
+          clearInterval(timer);
+          element.textContent = `£${value.toLocaleString()}`;
+        }
+      }, duration / steps);
+    }
+    
+    // Update features display
+    function updateFeatures(serviceType) {
+      const featuresContainer = document.getElementById('included-features');
+      if (!featuresContainer) return;
+      
+      const featuresList = features[serviceType] || features.starter;
+      featuresContainer.innerHTML = featuresList.map(feature => `
+        <div class="flex items-center">
+          <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span>${feature}</span>
+        </div>
+      `).join('');
+    }
+    
+    // CTA button handlers
+    document.getElementById('get-started-btn')?.addEventListener('click', function() {
+      const price = document.getElementById('total-price').textContent;
+      window.location.href = `/contact?package=custom&price=${price}`;
+    });
+    
+    document.getElementById('consultation-btn')?.addEventListener('click', function() {
+      window.location.href = '/contact?type=consultation';
+    });
+    
+    // Initial price calculation
+    updatePrice();
+  });
+</script>

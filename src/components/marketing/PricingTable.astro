@@ -1,0 +1,187 @@
+---
+const pricingPlans = [
+  {
+    name: "Starter Website",
+    price: 2000,
+    upfront: 500,
+    monthly: 500,
+    popular: false,
+    features: [
+      "5-page responsive website",
+      "Competitor keyword research",
+      "Basic SEO optimization", 
+      "Mobile-first design",
+      "Image sourcing included",
+      "Contact form integration",
+      "Google Analytics setup",
+      "30-day support period"
+    ],
+    notIncluded: [
+      "Blog/CMS system",
+      "Advanced SEO strategy",
+      "Monthly reporting"
+    ]
+  },
+  {
+    name: "Business Package", 
+    price: 4000,
+    upfront: 1000,
+    monthly: 1000,
+    popular: true,
+    features: [
+      "10-page business website",
+      "Advanced competitor analysis",
+      "Full SEO strategy",
+      "Content management system",
+      "Blog with SEO optimization",
+      "Lead generation forms",
+      "Email automation setup",
+      "Social media integration",
+      "Performance monitoring",
+      "90-day support + monthly reports"
+    ],
+    notIncluded: [
+      "E-commerce functionality",
+      "Custom web application"
+    ]
+  },
+  {
+    name: "Premium Package",
+    price: 8000,
+    upfront: 2000,
+    monthly: 2000,
+    popular: false,
+    features: [
+      "Custom web application/e-commerce",
+      "Full competitor intelligence report",
+      "Advanced SEO campaign setup",
+      "Content strategy and creation",
+      "Custom functionality development",
+      "API integrations",
+      "Advanced analytics setup",
+      "A/B testing implementation",
+      "Priority support",
+      "6-month ongoing SEO management"
+    ],
+    notIncluded: []
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+        Transparent Pricing, <span class="text-gradient">No Hidden Fees</span>
+      </h2>
+      <p class="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
+        Pay in 4 easy installments. Every package includes competitor research and our fair pricing commitment.
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {pricingPlans.map((plan) => (
+        <div class={`relative bg-white rounded-2xl ${plan.popular ? 'ring-2 ring-[var(--primary)] shadow-xl' : 'border border-gray-200'} p-8 hover:shadow-xl transition-shadow`}>
+          {plan.popular && (
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="bg-gradient-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </span>
+            </div>
+          )}
+
+          <!-- Plan Name -->
+          <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-4">{plan.name}</h3>
+
+          <!-- Price -->
+          <div class="mb-6">
+            <div class="flex items-baseline">
+              <span class="text-4xl font-bold text-[var(--primary)]">£{plan.price.toLocaleString()}</span>
+              <span class="text-[var(--text-secondary)] ml-2">total</span>
+            </div>
+            <div class="mt-2 text-sm text-[var(--text-secondary)]">
+              <span class="font-medium text-[var(--accent)]">£{plan.upfront}</span> upfront, then
+              <span class="font-medium text-[var(--accent)]"> £{plan.monthly}</span>/month for 3 months
+            </div>
+          </div>
+
+          <!-- Payment Timeline -->
+          <div class="mb-6 p-4 bg-slate-50 rounded-lg">
+            <div class="text-xs font-semibold text-[var(--text-secondary)] mb-2">PAYMENT SCHEDULE</div>
+            <div class="space-y-1">
+              <div class="flex justify-between text-sm">
+                <span>Month 1</span>
+                <span class="font-medium">£{plan.upfront}</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span>Month 2</span>
+                <span class="font-medium">£{plan.monthly}</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span>Month 3</span>
+                <span class="font-medium">£{plan.monthly}</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span>Month 4</span>
+                <span class="font-medium">£{plan.monthly}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <div class="mb-8">
+            <div class="text-sm font-semibold text-[var(--text-secondary)] mb-3">WHAT'S INCLUDED</div>
+            <ul class="space-y-3">
+              {plan.features.map((feature) => (
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-[var(--accent)] mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span class="text-sm text-[var(--text-primary)]">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            {plan.notIncluded.length > 0 && (
+              <>
+                <div class="text-sm font-semibold text-[var(--text-secondary)] mb-3 mt-6">NOT INCLUDED</div>
+                <ul class="space-y-2">
+                  {plan.notIncluded.map((feature) => (
+                    <li class="flex items-start">
+                      <svg class="w-5 h-5 text-gray-400 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="text-sm text-gray-500">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+
+          <!-- CTA Button -->
+          <a 
+            href="/contact" 
+            class={`w-full ${plan.popular ? 'btn btn-primary' : 'btn btn-secondary'}`}
+          >
+            Start Your Project
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Fair Business Promise -->
+    <div class="mt-12 text-center">
+      <div class="inline-flex items-center px-6 py-3 bg-[var(--accent)]/10 rounded-lg">
+        <svg class="w-6 h-6 text-[var(--accent)] mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="text-[var(--text-primary)] font-medium">
+          Transparent Pricing • Fair Business Practices
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

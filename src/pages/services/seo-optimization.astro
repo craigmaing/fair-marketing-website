@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'SEO Optimization Services | Outcome Digital Marketing';
+const pageDescription = 'Data-driven SEO strategies that outrank competitors. Keyword research, technical SEO, content optimization, and transparent monthly reporting.';
+const pageKeywords = ['SEO services', 'search engine optimization', 'keyword research', 'technical SEO', 'SEO agency UK'];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  structuredDataType="Service"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-green-600 to-green-800 py-20 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold mb-6">
+          SEO That Actually Gets You Rankings
+        </h1>
+        <p class="text-xl text-green-100 mb-8">
+          Outrank your competitors with data-driven SEO strategies. 
+          No black-hat tactics, just proven methods that deliver results.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#packages" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-green-600 bg-white hover:bg-gray-100 transition-colors">
+            View SEO Packages
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-lg text-white hover:bg-green-700 transition-colors">
+            Get Free Audit
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Services -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Comprehensive SEO Services
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-4">Technical SEO</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>Site speed optimization</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>Mobile optimization</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>Schema markup implementation</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>XML sitemap optimization</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold mb-4">Content Optimization</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>Keyword research & mapping</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>Content gap analysis</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>On-page optimization</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                <span>Internal linking strategy</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="packages" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Transparent SEO Pricing
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-bold mb-4">Starter SEO</h3>
+            <div class="text-3xl font-bold text-green-600 mb-4">£500/mo</div>
+            <ul class="space-y-2 text-gray-600">
+              <li>• 10 target keywords</li>
+              <li>• Monthly reporting</li>
+              <li>• Basic technical SEO</li>
+              <li>• Content recommendations</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8 ring-2 ring-green-600">
+            <h3 class="text-xl font-bold mb-4">Growth SEO</h3>
+            <div class="text-3xl font-bold text-green-600 mb-4">£1,500/mo</div>
+            <ul class="space-y-2 text-gray-600">
+              <li>• 30 target keywords</li>
+              <li>• Competitor monitoring</li>
+              <li>• Advanced technical SEO</li>
+              <li>• Content creation</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-xl font-bold mb-4">Enterprise SEO</h3>
+            <div class="text-3xl font-bold text-green-600 mb-4">£3,000/mo</div>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Unlimited keywords</li>
+              <li>• Full competitor analysis</li>
+              <li>• Complete SEO management</li>
+              <li>• Dedicated SEO team</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

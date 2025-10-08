@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const blogPosts = [
+  {
+    title: 'How to Outrank Your Competitors in 2025',
+    excerpt: 'Data-driven strategies for dominating search results without breaking the bank.',
+    date: '2025-01-15',
+    category: 'SEO',
+    readTime: '5 min read',
+    slug: 'outrank-competitors-2025'
+  },
+  {
+    title: 'The True Cost of Website Development',
+    excerpt: 'Breaking down what you should really pay for a professional website.',
+    date: '2025-01-10',
+    category: 'Web Development',
+    readTime: '7 min read',
+    slug: 'true-cost-website-development'
+  },
+  {
+    title: 'Why Transparent Pricing Wins Every Time',
+    excerpt: 'How being upfront about costs builds trust and closes more deals.',
+    date: '2025-01-05',
+    category: 'Business',
+    readTime: '4 min read',
+    slug: 'transparent-pricing-wins'
+  }
+];
+
+const pageTitle = 'Marketing Blog & Resources | Outcome Digital Marketing';
+const pageDescription = 'Free marketing insights, SEO tips, and web development guides. Learn how to grow your business with ethical, effective digital marketing.';
+const pageKeywords = ['marketing blog', 'SEO tips', 'web development guides', 'digital marketing insights'];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-green-50 to-white py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <img
+        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&h=1080&fit=crop&auto=format"
+        alt="Blog and resources"
+        class="w-full h-full object-cover"
+        width="1920"
+        height="1080"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Marketing Insights & Resources
+        </h1>
+        <p class="text-xl text-gray-600">
+          Free guides and insights to help you grow your business the right way.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          {blogPosts.map((post, index) => {
+            const images = [
+              'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=450&fit=crop&auto=format',
+              'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=800&h=450&fit=crop&auto=format',
+              'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=450&fit=crop&auto=format'
+            ];
+            return (
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div class="h-48 relative">
+                <img
+                  src={images[index]}
+                  alt={post.title}
+                  class="w-full h-full object-cover"
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-sm text-blue-600 font-semibold">{post.category}</span>
+                  <span class="text-sm text-gray-500">{post.readTime}</span>
+                </div>
+                <h2 class="text-xl font-bold mb-3">
+                  <a href={`/blog/${post.slug}`} class="hover:text-blue-600 transition-colors">
+                    {post.title}
+                  </a>
+                </h2>
+                <p class="text-gray-600 mb-4">{post.excerpt}</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">{post.date}</span>
+                  <a href={`/blog/${post.slug}`} class="text-blue-600 hover:text-blue-700 font-medium">
+                    Read More →
+                  </a>
+                </div>
+              </div>
+            </article>
+          )})}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Get Marketing Tips That Actually Work
+        </h2>
+        <p class="text-gray-600 mb-8">
+          No spam, no BS. Just actionable insights delivered weekly.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+          <button
+            type="submit"
+            class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

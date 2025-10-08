@@ -1,0 +1,136 @@
+---
+// Modern Header component for Outcome Digital Marketing - Enhanced design
+import Logo from './Brand/Logo.astro';
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 shadow-lg">
+  <div class="container">
+    <nav class="flex items-center justify-between h-20 md:h-24">
+      <!-- Enhanced Logo -->
+      <div class="flex items-center">
+        <a href="/" class="group flex items-center hover:opacity-90 transition-all duration-300">
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-gradient-to-r from-brand-navy to-brand-blue rounded-2xl flex items-center justify-center shadow-lg">
+              <span class="text-white font-black text-xl">F</span>
+            </div>
+            <div>
+              <div class="text-xl font-black text-neutral-900 group-hover:text-brand-navy transition-colors">
+                Outcome Digital Marketing
+              </div>
+              <div class="text-xs text-brand-blue font-medium -mt-1">
+                Fair • Transparent • Effective
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="ml-6 hidden lg:flex items-center">
+          <div class="px-4 py-2 bg-gradient-to-r from-brand-emerald/20 to-brand-blue/20 text-brand-navy text-sm font-bold rounded-full border border-brand-emerald/30 backdrop-blur-sm">
+            <svg class="w-4 h-4 mr-2 inline-block" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            100% Fair Pricing
+          </div>
+        </div>
+      </div>
+      
+      <!-- Enhanced Desktop Navigation -->
+      <div class="hidden lg:flex items-center space-x-10">
+        <a href="#services" class="group text-neutral-700 hover:text-brand-navy font-semibold transition-all duration-300 relative">
+          Services
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-navy to-brand-blue group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#pricing-calculator" class="group text-neutral-700 hover:text-brand-navy font-semibold transition-all duration-300 relative">
+          Pricing
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-navy to-brand-blue group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#about" class="group text-neutral-700 hover:text-brand-navy font-semibold transition-all duration-300 relative">
+          About
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-navy to-brand-blue group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="/case-studies" class="group text-neutral-700 hover:text-brand-navy font-semibold transition-all duration-300 relative">
+          Results
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-navy to-brand-blue group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="/blog" class="group text-neutral-700 hover:text-brand-navy font-semibold transition-all duration-300 relative">
+          Blog
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-navy to-brand-blue group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </div>
+      
+      <!-- Enhanced CTA Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#pricing-calculator" class="group flex items-center px-4 py-2 text-brand-navy font-semibold hover:text-brand-blue transition-all duration-300">
+          <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+          Calculator
+        </a>
+        <a href="/contact" class="group px-8 py-3 bg-gradient-to-r from-brand-navy to-brand-blue text-white font-bold rounded-2xl hover:shadow-xl hover:shadow-brand-blue/25 transform hover:scale-105 transition-all duration-300">
+          <span class="group-hover:mr-2 transition-all duration-300">Get Started</span>
+          <svg class="w-5 h-5 inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+        aria-label="Toggle mobile menu"
+        id="mobile-menu-button"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="lg:hidden hidden" id="mobile-menu">
+      <div class="py-4 space-y-4 border-t border-slate-200">
+        <a href="/services" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors">
+          Services
+        </a>
+        <a href="/pricing" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors">
+          Transparent Pricing
+        </a>
+        <a href="/about" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors">
+          About
+        </a>
+        <a href="/case-studies" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors">
+          Case Studies
+        </a>
+        <a href="/blog" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors">
+          Blog
+        </a>
+        <div class="pt-4 space-y-3">
+          <a href="/calculator" class="block btn btn-secondary w-full text-center">
+            Pricing Calculator
+          </a>
+          <a href="/contact" class="block btn btn-primary w-full text-center">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    
+    button?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!button?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
+        menu?.classList.add('hidden');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,50 @@
+---
+// Wrapper to apply Site 1's styling to Site 2's content
+---
+
+<div class="site1-styling">
+  <slot />
+</div>
+
+<style>
+  /* Apply Site 1's clean, modern styling */
+  .site1-styling {
+    --primary: #1e3a8a;
+    --secondary: #3b82f6;
+    --accent: #10b981;
+    --warning: #f59e0b;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-light: #f9fafb;
+  }
+  
+  .site1-styling :global(h1),
+  .site1-styling :global(h2),
+  .site1-styling :global(h3) {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  .site1-styling :global(p) {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .site1-styling :global(.btn) {
+    @apply px-6 py-3 rounded-lg font-semibold transition-colors;
+  }
+  
+  .site1-styling :global(.btn-primary) {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .site1-styling :global(section) {
+    @apply py-20;
+  }
+  
+  .site1-styling :global(.container) {
+    @apply mx-auto px-4;
+  }
+</style>
