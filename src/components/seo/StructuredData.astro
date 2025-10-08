@@ -20,7 +20,7 @@ const organizationSchema = {
   "telephone": brand.contact.phone,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "London",
+    "addressRegion": "UK",
     "addressCountry": "GB"
   },
   "sameAs": [
@@ -71,11 +71,6 @@ const organizationSchema = {
 const localBusinessSchema = {
   ...organizationSchema,
   "@type": "LocalBusiness",
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "51.5074",
-    "longitude": "-0.1278"
-  },
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"

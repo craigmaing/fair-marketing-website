@@ -1,0 +1,184 @@
+---
+import { brand } from '../../lib/brand';
+
+export interface Props {
+  type?: 'Organization' | 'BlogPosting' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'LocalBusiness';
+  data?: any;
+}
+
+const { type = 'Organization', data = {} } = Astro.props;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": brand.name,
+  "alternateName": "Fearnbell",
+  "url": Astro.site,
+  "logo": new URL('/logo.png', Astro.site),
+  "description": brand.valueProposition,
+  "email": brand.contact.email,
+  "telephone": brand.contact.phone,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    `https://twitter.com/${brand.contact.social.twitter}`,
+    `https://linkedin.com/company/${brand.contact.social.linkedin}`,
+    `https://github.com/${brand.contact.social.github}`
+  ],
+  "priceRange": "££",
+  "founder": {
+    "@type": "Person",
+    "name": "Craig Fearn"
+  },
+  "foundingDate": "2024",
+  "slogan": brand.tagline,
+  "knowsAbout": [
+    "Website Development",
+    "SEO Optimization",
+    "Competitor Analysis",
+    "Digital Marketing",
+    "Web Design",
+    "Content Strategy"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Starter Website Package",
+      "price": "2000",
+      "priceCurrency": "GBP",
+      "description": "5-page responsive website with basic SEO"
+    },
+    {
+      "@type": "Offer",
+      "name": "Business Package",
+      "price": "4000",
+      "priceCurrency": "GBP",
+      "description": "10-page business website with advanced SEO"
+    },
+    {
+      "@type": "Offer",
+      "name": "Premium Package",
+      "price": "8000",
+      "priceCurrency": "GBP",
+      "description": "Custom web application with full SEO campaign"
+    }
+  ]
+};
+
+const localBusinessSchema = {
+  ...organizationSchema,
+  "@type": "LocalBusiness",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "51.5074",
+    "longitude": "-0.1278"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  }
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": data.serviceType || "Digital Marketing Service",
+  "provider": {
+    "@type": "Organization",
+    "name": brand.name
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Marketing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Website Development",
+          "description": "Custom website development with SEO optimization"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO Optimization",
+          "description": "Ethical SEO services with transparent reporting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Competitor Analysis",
+          "description": "Deep competitor research and market intelligence"
+        }
+      }
+    ]
+  },
+  ...data
+};
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "publisher": {
+    "@type": "Organization",
+    "name": brand.name,
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL('/logo.png', Astro.site)
+    }
+  },
+  ...data
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": data.items || []
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.questions || []
+};
+
+let schema;
+switch (type) {
+  case 'LocalBusiness':
+    schema = localBusinessSchema;
+    break;
+  case 'Service':
+    schema = serviceSchema;
+    break;
+  case 'BlogPosting':
+    schema = blogPostingSchema;
+    break;
+  case 'BreadcrumbList':
+    schema = breadcrumbSchema;
+    break;
+  case 'FAQPage':
+    schema = faqSchema;
+    break;
+  default:
+    schema = organizationSchema;
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

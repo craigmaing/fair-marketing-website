@@ -1,0 +1,23 @@
+{
+  "name": "fearnbell-marketing-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.4",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}

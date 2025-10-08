@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PricingTable from '../components/marketing/PricingTable.astro';
+
+const pageTitle = 'Transparent Pricing | Fearnbell Marketing';
+const pageDescription = 'Clear, upfront pricing for all our services. No hidden fees, no surprises. Fair 4-payment structure for every project.';
+const pageKeywords = ['marketing agency pricing', 'transparent pricing', 'fair marketing costs', 'website development pricing', 'SEO pricing'];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-amber-50 to-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Transparent Pricing. No BS.
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Every price published. Every fee explained. Pay in 4 easy installments.
+        </p>
+        <div class="inline-flex items-center px-6 py-3 bg-green-100 rounded-lg">
+          <span class="text-green-800 font-semibold">
+            💚 All prices include competitor research & image sourcing
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Component -->
+  <PricingTable />
+
+  <!-- Payment Structure -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Our Fair 4-Payment Structure
+        </h2>
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="grid md:grid-cols-4 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 1</div>
+              <p class="text-sm text-gray-600">Project kickoff & research</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 2</div>
+              <p class="text-sm text-gray-600">Design approval & development</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 3</div>
+              <p class="text-sm text-gray-600">Development & testing</p>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <div class="font-semibold mb-2">Month 4</div>
+              <p class="text-sm text-gray-600">Launch & optimization</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          What's Always Included
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <span class="text-4xl mb-4 block">🔍</span>
+            <h3 class="text-xl font-semibold mb-2">Competitor Research</h3>
+            <p class="text-gray-600">Deep analysis of your competition included in every package</p>
+          </div>
+          <div class="text-center">
+            <span class="text-4xl mb-4 block">📸</span>
+            <h3 class="text-xl font-semibold mb-2">Image Sourcing</h3>
+            <p class="text-gray-600">Professional images sourced and optimized at no extra cost</p>
+          </div>
+          <div class="text-center">
+            <span class="text-4xl mb-4 block">📊</span>
+            <h3 class="text-xl font-semibold mb-2">Performance Reports</h3>
+            <p class="text-gray-600">Monthly reports showing real metrics and ROI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Pricing FAQ
+        </h2>
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Can I cancel at any time?</h3>
+            <p class="text-gray-600">Yes! You can cancel at any time and only pay for work completed.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Are there any hidden fees?</h3>
+            <p class="text-gray-600">Never. The price you see is the price you pay. Period.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">What if I need something custom?</h3>
+            <p class="text-gray-600">We'll provide a clear, itemized quote before any work begins.</p>
+          </div>
+          <div class="bg-white rounded-lg p-6">
+            <h3 class="font-semibold text-lg mb-2">Do you offer discounts?</h3>
+            <p class="text-gray-600">Our prices are already fair. We believe in transparent, consistent pricing for everyone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Ready to Get Started?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Choose your package and let's build something amazing together.
+      </p>
+      <a href="/contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors">
+        Start Your Project Today
+      </a>
+    </div>
+  </section>
+</BaseLayout>

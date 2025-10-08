@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pageTitle = 'Website Development Services | Fearnbell Marketing';
+const pageDescription = 'Lightning-fast, SEO-optimized website development with transparent pricing. Modern tech stack, perfect performance scores, and fair payment terms.';
+const pageKeywords = ['website development', 'web design services', 'affordable website development', 'SEO website builder', 'responsive web design'];
+
+const packages = [
+  {
+    name: 'Starter Website',
+    price: '£2,000',
+    upfront: '£500',
+    monthly: '£500',
+    duration: '3 months',
+    features: [
+      '5-page responsive website',
+      'Mobile-first design',
+      'Basic SEO optimization',
+      'Contact form integration',
+      'Google Analytics setup',
+      'Image optimization',
+      '30-day support',
+      'Performance optimization'
+    ]
+  },
+  {
+    name: 'Business Website',
+    price: '£4,000',
+    upfront: '£1,000',
+    monthly: '£1,000',
+    duration: '3 months',
+    features: [
+      '10-page business website',
+      'Advanced SEO implementation',
+      'Content management system',
+      'Blog functionality',
+      'Lead generation forms',
+      'Email integration',
+      '90-day support',
+      'Monthly performance reports'
+    ],
+    popular: true
+  },
+  {
+    name: 'Enterprise Solution',
+    price: '£8,000+',
+    upfront: '£2,000',
+    monthly: 'Custom',
+    duration: '4 months',
+    features: [
+      'Custom web application',
+      'E-commerce functionality',
+      'Advanced integrations',
+      'Custom API development',
+      'Multi-language support',
+      'Advanced security features',
+      '6-month support',
+      'Dedicated project manager'
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  structuredDataType="Service"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 to-blue-800 py-20 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold mb-6">
+          Website Development That Delivers Results
+        </h1>
+        <p class="text-xl text-blue-100 mb-8">
+          Lightning-fast, SEO-optimized websites built with modern technology. 
+          No hidden fees, just transparent pricing and exceptional performance.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#packages" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors">
+            View Packages
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-lg text-white hover:bg-blue-700 transition-colors">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Why Our Websites Outperform The Competition
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-green-100 mb-4">
+              <span class="text-3xl">⚡</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Lightning Fast</h3>
+            <p class="text-gray-600">
+              Perfect Lighthouse scores with sub-2 second load times. Built with Astro for optimal performance.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 mb-4">
+              <span class="text-3xl">📱</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Mobile-First</h3>
+            <p class="text-gray-600">
+              Responsive design that looks perfect on every device. Mobile users are your priority.
+            </p>
+          </div>
+          
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-100 mb-4">
+              <span class="text-3xl">🔍</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">SEO Optimized</h3>
+            <p class="text-gray-600">
+              Built with search engines in mind. Technical SEO, schema markup, and competitor research included.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section id="packages" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-6">
+          Transparent Website Development Pricing
+        </h2>
+        <p class="text-xl text-gray-600 text-center mb-12">
+          Fair 4-payment structure. No hidden fees. Cancel anytime.
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          {packages.map((pkg) => (
+            <div class={`bg-white rounded-xl shadow-lg p-8 ${pkg.popular ? 'ring-2 ring-blue-600 relative' : ''}`}>
+              {pkg.popular && (
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span class="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold mb-2">{pkg.name}</h3>
+                <div class="text-4xl font-bold text-blue-600 mb-2">
+                  {pkg.price}
+                </div>
+                <p class="text-gray-600">
+                  {pkg.upfront} upfront, then {pkg.monthly} × {pkg.duration}
+                </p>
+              </div>
+              
+              <ul class="space-y-3 mb-8">
+                {pkg.features.map((feature) => (
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-600">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <a href="/contact" class={`block w-full text-center px-6 py-3 rounded-lg font-medium transition-colors ${
+                pkg.popular 
+                  ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                  : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+              }`}>
+                Get Started
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12">
+          Our Development Process
+        </h2>
+        
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+              1
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold mb-2">Discovery & Research</h3>
+              <p class="text-gray-600">
+                We analyze your competitors, research your market, and understand your goals to create a winning strategy.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+              2
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold mb-2">Design & Development</h3>
+              <p class="text-gray-600">
+                Create stunning, conversion-focused designs and build with clean, performant code using modern technology.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+              3
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold mb-2">Testing & Optimization</h3>
+              <p class="text-gray-600">
+                Rigorous testing across devices, performance optimization, and SEO implementation to ensure perfect scores.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+              4
+            </div>
+            <div class="ml-6">
+              <h3 class="text-xl font-semibold mb-2">Launch & Support</h3>
+              <p class="text-gray-600">
+                Smooth deployment, comprehensive training, and ongoing support to ensure your success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-blue-600">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Ready to Build Your Dream Website?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Get a free consultation and see how we can create a website that outperforms your competition.
+      </p>
+      <a href="/contact" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-blue-600 bg-white hover:bg-gray-100 transition-colors">
+        Start Your Project Today
+      </a>
+    </div>
+  </section>
+</BaseLayout>

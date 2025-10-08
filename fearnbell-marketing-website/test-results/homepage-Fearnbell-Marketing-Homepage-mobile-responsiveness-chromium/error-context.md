@@ -1,0 +1,497 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Brand logo of lighthouse mentoring" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "Brand logo of lighthouse mentoring" [ref=e6] [cursor=pointer]
+        - button "Menu" [ref=e9] [cursor=pointer]:
+          - img [ref=e10] [cursor=pointer]
+          - generic [ref=e13] [cursor=pointer]: en
+          - img [ref=e14] [cursor=pointer]
+        - button "Toggle navigation" [ref=e16] [cursor=pointer]:
+          - img [ref=e19] [cursor=pointer]
+  - dialog "Offcanvas" [ref=e27]:
+    - generic [ref=e28]:
+      - button "Close offcanvas" [ref=e29] [cursor=pointer]:
+        - img [ref=e30] [cursor=pointer]
+      - link "Brand logo of lighthouse mentoring" [ref=e32] [cursor=pointer]:
+        - /url: /
+        - img "Brand logo of lighthouse mentoring" [ref=e33] [cursor=pointer]
+      - paragraph [ref=e35]: We help SMEs transform workplace wellbeing through AI-enhanced audits and practical implementation support.
+      - menu [ref=e37]:
+        - menuitem "Home" [ref=e38]:
+          - link "Home" [ref=e39] [cursor=pointer]:
+            - /url: /
+        - menuitem "Services" [ref=e40]:
+          - link "Services" [ref=e41] [cursor=pointer]:
+            - /url: /#services
+        - menuitem "Projects" [ref=e42]:
+          - link "Projects" [ref=e43] [cursor=pointer]:
+            - /url: /#projects
+        - menuitem "Pricing" [ref=e44]:
+          - link "Pricing" [ref=e45] [cursor=pointer]:
+            - /url: /#pricing
+        - menuitem "Get Assessment" [ref=e46]:
+          - link "Get Assessment" [ref=e47] [cursor=pointer]:
+            - /url: /
+            - text: Get Assessment
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - text: Birmingham,
+          - text: West Midlands, UK
+        - paragraph [ref=e50]:
+          - link "+44 (0) 7738 419 446" [ref=e51] [cursor=pointer]:
+            - /url: tel:+447738419446
+        - paragraph [ref=e52]:
+          - link "craig.fearn@lighthousementoring.co.uk" [ref=e53] [cursor=pointer]:
+            - /url: mailto:craig.fearn@lighthousementoring.co.uk
+      - list [ref=e54]:
+        - listitem [ref=e55]:
+          - link "linkedin" [ref=e56] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/craig-fearn/
+            - generic [ref=e57] [cursor=pointer]: linkedin
+            - img [ref=e58] [cursor=pointer]
+    - generic [ref=e60]: Offcanvas
+  - main [ref=e61]:
+    - generic [ref=e64]:
+      - heading "Workplace Wellbeing Audits Enhanced with AI" [level=1] [ref=e65]
+      - generic [ref=e66]:
+        - paragraph [ref=e67]: Comprehensive workplace wellbeing assessments combining human expertise with AI analysis to help SMEs create healthier, more productive work environments.
+        - link "Get Free Assessment" [ref=e68] [cursor=pointer]:
+          - /url: /contact/
+          - text: Get Free Assessment
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - img "Craig Fearn, RSPH - Founder of Lighthouse Mentoring" [ref=e73]
+          - generic [ref=e75]:
+            - img "IoD Ambassador" [ref=e76]
+            - generic [ref=e77]:
+              - paragraph [ref=e78]: Craig Fearn
+              - paragraph [ref=e79]: FRSPH | IoD Ambassador
+            - img "RSPH Fellow" [ref=e80]
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]: About The Founder
+            - heading "Craig Fearn, FRSPH" [level=2] [ref=e84]
+            - paragraph [ref=e85]: Workplace Wellbeing Expert & AI Integration Pioneer
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: Craig Fearn is the founder and lead consultant at Lighthouse Mentoring, bringing over two decades of experience in organizational psychology and workplace wellbeing. As a Fellow of the Royal Society for Public Health (FRSPH) and an Institute of Directors (IoD) Ambassador, Craig combines deep expertise in human psychology with cutting-edge AI technology.
+            - paragraph [ref=e88]: His unique approach to wellbeing audits integrates traditional assessment methodologies with advanced AI analytics, providing SMEs with unprecedented insights into their workplace culture and employee wellness patterns.
+            - generic [ref=e89]:
+              - heading "Key Achievements" [level=3] [ref=e90]
+              - list [ref=e91]:
+                - listitem [ref=e92]:
+                  - img [ref=e93]
+                  - generic [ref=e95]: IoD England Director of the Year Awards 2025 - Global Finalist
+                - listitem [ref=e96]:
+                  - img [ref=e97]
+                  - generic [ref=e99]: IoD England Director of the Year Awards 2025 - Aspiring Finalist
+                - listitem [ref=e100]:
+                  - img [ref=e101]
+                  - generic [ref=e103]: Fellow of the Royal Society for Public Health (FRSPH)
+                - listitem [ref=e104]:
+                  - img [ref=e105]
+                  - generic [ref=e107]: Institute of Directors Ambassador
+                - listitem [ref=e108]:
+                  - img [ref=e109]
+                  - generic [ref=e111]: Regular speaker at IoD conferences on workplace wellbeing
+            - paragraph [ref=e112]: Craig's mission is to make comprehensive wellbeing assessments accessible to SMEs through innovative AI-enhanced methodologies, helping businesses create healthier, more productive workplaces while maintaining the human insight that's essential for meaningful change.
+          - generic [ref=e113]:
+            - link "Book a Consultation" [ref=e114] [cursor=pointer]:
+              - /url: /contact
+            - link "Connect on LinkedIn" [ref=e115] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/craig-fearn/
+      - generic [ref=e116]:
+        - heading "Speaking Engagements & Industry Leadership" [level=3] [ref=e117]
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - img "Craig Fearn speaking at IoD conference panel" [ref=e120]
+            - generic [ref=e121]:
+              - paragraph [ref=e122]: IoD Conference Panel Member
+              - paragraph [ref=e123]: Discussing workplace wellbeing strategies
+          - generic [ref=e124]:
+            - img "Craig Fearn at IoD conference" [ref=e125]
+            - generic [ref=e126]:
+              - paragraph [ref=e127]: Industry Conference Participation
+              - paragraph [ref=e128]: Engaging with business leaders on wellbeing topics
+    - list [ref=e131]:
+      - listitem [ref=e132]:
+        - generic [ref=e133]:
+          - img "example alt text" [ref=e134]
+          - img "example alt text" [ref=e135]
+      - listitem [ref=e136]:
+        - generic [ref=e137]:
+          - img "example alt text" [ref=e138]
+          - img "example alt text" [ref=e139]
+      - listitem [ref=e140]:
+        - generic [ref=e141]:
+          - img "example alt text" [ref=e142]
+          - img "example alt text" [ref=e143]
+      - listitem [ref=e144]:
+        - generic [ref=e145]:
+          - img "example alt text" [ref=e146]
+          - img "example alt text" [ref=e147]
+      - listitem [ref=e148]:
+        - generic [ref=e149]:
+          - img "example alt text" [ref=e150]
+          - img "example alt text" [ref=e151]
+      - listitem [ref=e152]:
+        - generic [ref=e153]:
+          - img "example alt text" [ref=e154]
+          - img "example alt text" [ref=e155]
+      - listitem [ref=e156]:
+        - generic [ref=e157]:
+          - img "example alt text" [ref=e158]
+          - img "example alt text" [ref=e159]
+      - listitem [ref=e160]:
+        - generic [ref=e161]:
+          - img "example alt text" [ref=e162]
+          - img "example alt text" [ref=e163]
+    - generic [ref=e165]:
+      - heading "Transform Your Workplace Wellbeing" [level=2] [ref=e166]
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e169]: "01"
+          - button "show or hide accordion content" [ref=e170] [cursor=pointer]
+          - button "Wellbeing Audit" [expanded] [ref=e171] [cursor=pointer]
+          - region "01 show or hide accordion content Wellbeing Audit Data analysis using AI to identify patterns and insights in workplace wellbeing" [ref=e172]:
+            - paragraph [ref=e175]: Data analysis using AI to identify patterns and insights in workplace wellbeing
+          - generic:
+            - img
+        - generic [ref=e176]:
+          - generic [ref=e177]: "02"
+          - button "show or hide accordion content" [ref=e178] [cursor=pointer]
+          - button "AI Analytics" [ref=e179] [cursor=pointer]
+          - generic:
+            - img
+        - generic [ref=e180]:
+          - generic [ref=e181]: "03"
+          - button "show or hide accordion content" [ref=e182] [cursor=pointer]
+          - button "Implementation Support" [ref=e183] [cursor=pointer]
+          - generic:
+            - img
+        - generic [ref=e184]:
+          - generic [ref=e185]: "04"
+          - button "show or hide accordion content" [ref=e186] [cursor=pointer]
+          - button "Leadership Development" [ref=e187] [cursor=pointer]
+          - generic:
+            - img
+    - generic [ref=e189]:
+      - generic [ref=e190]:
+        - generic [ref=e191]: Client Testimonials
+        - heading "What Business Leaders Say" [level=2] [ref=e192]
+        - paragraph [ref=e193]: Real feedback from executives and HR leaders who have experienced the impact of our wellbeing audits
+      - generic [ref=e194]:
+        - generic [ref=e195]:
+          - img [ref=e196]
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - img [ref=e200]
+              - img [ref=e202]
+              - img [ref=e204]
+              - img [ref=e206]
+              - img [ref=e208]
+            - paragraph [ref=e210]: "\"Craig helped us to remove our limiting beliefs and reframe to allow us to grow exponentially. He has an uncanny ability to say the right thing at the right time.\""
+            - generic [ref=e211]:
+              - paragraph [ref=e212]: Alex Phillips
+              - paragraph [ref=e213]: CEO, Phillips Group International Ltd
+        - generic [ref=e214]:
+          - img [ref=e215]
+          - generic [ref=e217]:
+            - generic [ref=e218]:
+              - img [ref=e219]
+              - img [ref=e221]
+              - img [ref=e223]
+              - img [ref=e225]
+              - img [ref=e227]
+            - paragraph [ref=e229]: "\"Craig worked in partnership with me to turnaround a very dysfunctional team, helping me to achieve team cohesiveness. Craig challenged my thinking and provided me with a perspective that I hadn't fully considered.\""
+            - generic [ref=e230]:
+              - paragraph [ref=e231]: Julie Agar
+              - paragraph [ref=e232]: Operations Lead, NHS Trust
+        - generic [ref=e233]:
+          - img [ref=e234]
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - img [ref=e238]
+              - img [ref=e240]
+              - img [ref=e242]
+              - img [ref=e244]
+              - img [ref=e246]
+            - paragraph [ref=e248]: "\"Craig excels at helping business leaders gain clarity on complex problems. His approach to organizational wellbeing is both strategic and practical, delivering measurable improvements.\""
+            - generic [ref=e249]:
+              - paragraph [ref=e250]: Sarah Mitchell
+              - paragraph [ref=e251]: HR Director, Tech SME
+        - generic [ref=e252]:
+          - img [ref=e253]
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - img [ref=e257]
+              - img [ref=e259]
+              - img [ref=e261]
+              - img [ref=e263]
+              - img [ref=e265]
+            - paragraph [ref=e267]: "\"The wellbeing audit provided insights we hadn't considered. The AI analysis combined with Craig's expertise gave us a comprehensive view of our workplace culture and clear action steps.\""
+            - generic [ref=e268]:
+              - paragraph [ref=e269]: Michael Chen
+              - paragraph [ref=e270]: Managing Director, Manufacturing SME
+        - generic [ref=e271]:
+          - img [ref=e272]
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - img [ref=e276]
+              - img [ref=e278]
+              - img [ref=e280]
+              - img [ref=e282]
+              - img [ref=e284]
+            - paragraph [ref=e286]: "\"Working with Craig transformed how we approach employee wellbeing. His combination of psychological expertise and data-driven insights helped us create lasting positive change.\""
+            - generic [ref=e287]:
+              - paragraph [ref=e288]: Emma Thompson
+              - paragraph [ref=e289]: People & Culture Manager, Professional Services
+        - generic [ref=e290]:
+          - img [ref=e291]
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - img [ref=e295]
+              - img [ref=e297]
+              - img [ref=e299]
+              - img [ref=e301]
+              - img [ref=e303]
+            - paragraph [ref=e305]: "\"The level of insight from the wellbeing audit was exceptional. It highlighted issues we were aware of but also revealed hidden patterns that were affecting productivity and morale.\""
+            - generic [ref=e306]:
+              - paragraph [ref=e307]: David Roberts
+              - paragraph [ref=e308]: COO, Digital Agency
+    - generic [ref=e312]:
+      - generic [ref=e313]:
+        - link "Learn more about manufacturing sme wellbeing transformation":
+          - /url: /portfolio/manufacturing-wellbeing-case-study/
+        - list [ref=e314]:
+          - listitem [ref=e315]: Wellbeing Audit
+          - listitem [ref=e316]: /
+          - listitem [ref=e317]: Culture Change
+          - listitem [ref=e318]: /
+          - listitem [ref=e319]: Implementation
+        - heading "Manufacturing SME Wellbeing Transformation" [level=3] [ref=e320]:
+          - link "Manufacturing SME Wellbeing Transformation" [ref=e321] [cursor=pointer]:
+            - /url: /portfolio/manufacturing-wellbeing-case-study/
+        - paragraph [ref=e322]: Complete workplace culture assessment and improvement program
+      - generic [ref=e323]:
+        - link "Learn more about nhs trust team transformation":
+          - /url: /portfolio/nhs-trust-team-case-study/
+        - list [ref=e324]:
+          - listitem [ref=e325]: Team Dynamics
+          - listitem [ref=e326]: /
+          - listitem [ref=e327]: Leadership Coaching
+          - listitem [ref=e328]: /
+          - listitem [ref=e329]: Healthcare
+        - heading "NHS Trust Team Transformation" [level=3] [ref=e330]:
+          - link "NHS Trust Team Transformation" [ref=e331] [cursor=pointer]:
+            - /url: /portfolio/nhs-trust-team-case-study/
+        - paragraph [ref=e332]: Turning around a dysfunctional team through targeted wellbeing interventions
+      - generic [ref=e333]:
+        - link "Enhancing Workplace Safety Protocols" [ref=e334] [cursor=pointer]:
+          - /url: /portfolio/portfolio-03/
+          - img "Enhancing Workplace Safety Protocols" [ref=e335] [cursor=pointer]
+        - list [ref=e336]:
+          - listitem [ref=e337]: Branding
+          - listitem [ref=e338]: /
+          - listitem [ref=e339]: Development
+          - listitem [ref=e340]: /
+          - listitem [ref=e341]: Marketing
+        - heading "Enhancing Workplace Safety Protocols" [level=3] [ref=e342]:
+          - link "Enhancing Workplace Safety Protocols" [ref=e343] [cursor=pointer]:
+            - /url: /portfolio/portfolio-03/
+      - generic [ref=e344]:
+        - link "Streamlining Financial Reporting" [ref=e345] [cursor=pointer]:
+          - /url: /portfolio/portfolio-04/
+          - img "Streamlining Financial Reporting" [ref=e346] [cursor=pointer]
+        - list [ref=e347]:
+          - listitem [ref=e348]: Branding
+          - listitem [ref=e349]: /
+          - listitem [ref=e350]: Development
+          - listitem [ref=e351]: /
+          - listitem [ref=e352]: Marketing
+        - heading "Streamlining Financial Reporting" [level=3] [ref=e353]:
+          - link "Streamlining Financial Reporting" [ref=e354] [cursor=pointer]:
+            - /url: /portfolio/portfolio-04/
+    - generic [ref=e356]:
+      - heading "Wellbeing Audit Packages" [level=2] [ref=e358]
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - generic [ref=e361]:
+            - generic [ref=e362]:
+              - heading "Essential" [level=3] [ref=e363]
+              - generic [ref=e364]: £2,500
+            - paragraph [ref=e365]: Perfect for small teams getting started with workplace wellbeing
+          - list [ref=e366]:
+            - listitem [ref=e367]:
+              - img [ref=e368]
+              - generic [ref=e370]: Up to 50 employees
+            - listitem [ref=e371]:
+              - img [ref=e372]
+              - generic [ref=e374]: Core wellbeing assessment
+            - listitem [ref=e375]:
+              - img [ref=e376]
+              - generic [ref=e378]: AI-powered analysis
+            - listitem [ref=e379]:
+              - img [ref=e380]
+              - generic [ref=e382]: Written report with findings
+            - listitem [ref=e383]:
+              - img [ref=e384]
+              - generic [ref=e386]: Basic recommendations
+            - listitem [ref=e387]:
+              - img [ref=e388]
+              - generic [ref=e390]: 30-day email support
+          - link "GET STARTED" [ref=e391] [cursor=pointer]:
+            - /url: /contact/
+            - text: GET STARTED
+        - generic [ref=e392]:
+          - generic [ref=e393]:
+            - generic [ref=e394]:
+              - heading "Professional" [level=3] [ref=e395]
+              - generic [ref=e396]: £5,000
+            - paragraph [ref=e397]: Comprehensive audit for growing businesses serious about wellbeing
+          - list [ref=e398]:
+            - listitem [ref=e399]:
+              - img [ref=e400]
+              - generic [ref=e402]: Up to 150 employees
+            - listitem [ref=e403]:
+              - img [ref=e404]
+              - generic [ref=e406]: Full wellbeing assessment
+            - listitem [ref=e407]:
+              - img [ref=e408]
+              - generic [ref=e410]: Advanced AI analytics
+            - listitem [ref=e411]:
+              - img [ref=e412]
+              - generic [ref=e414]: Detailed report & presentation
+            - listitem [ref=e415]:
+              - img [ref=e416]
+              - generic [ref=e418]: Action plan with priorities
+            - listitem [ref=e419]:
+              - img [ref=e420]
+              - generic [ref=e422]: Management workshop
+            - listitem [ref=e423]:
+              - img [ref=e424]
+              - generic [ref=e426]: 90-day support
+          - link "MOST POPULAR" [ref=e427] [cursor=pointer]:
+            - /url: /contact/
+            - text: MOST POPULAR
+        - generic [ref=e428]:
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - heading "Enterprise" [level=3] [ref=e431]
+              - generic [ref=e432]: Custom
+            - paragraph [ref=e433]: Full-scale transformation for organizations committed to excellence
+          - list [ref=e434]:
+            - listitem [ref=e435]:
+              - img [ref=e436]
+              - generic [ref=e438]: Unlimited employees
+            - listitem [ref=e439]:
+              - img [ref=e440]
+              - generic [ref=e442]: Multi-site assessment
+            - listitem [ref=e443]:
+              - img [ref=e444]
+              - generic [ref=e446]: Deep-dive AI analysis
+            - listitem [ref=e447]:
+              - img [ref=e448]
+              - generic [ref=e450]: Executive presentation
+            - listitem [ref=e451]:
+              - img [ref=e452]
+              - generic [ref=e454]: Implementation roadmap
+            - listitem [ref=e455]:
+              - img [ref=e456]
+              - generic [ref=e458]: Leadership coaching
+            - listitem [ref=e459]:
+              - img [ref=e460]
+              - generic [ref=e462]: Quarterly reviews
+            - listitem [ref=e463]:
+              - img [ref=e464]
+              - generic [ref=e466]: 12-month partnership
+          - link "CONTACT US" [ref=e467] [cursor=pointer]:
+            - /url: /contact/
+            - text: CONTACT US
+  - contentinfo [ref=e468]:
+    - generic [ref=e469]:
+      - generic [ref=e470]:
+        - generic [ref=e471]:
+          - heading "Let’s Work Together" [level=2] [ref=e472]
+          - paragraph [ref=e474]: We help SMEs transform workplace wellbeing through AI-enhanced audits and practical implementation support
+          - generic [ref=e475]:
+            - list [ref=e476]:
+              - listitem [ref=e477]:
+                - generic [ref=e478]: Copyright © 2025 Lighthouse Mentoring Ltd
+              - listitem [ref=e479]:
+                - generic [ref=e480]:
+                  - text: Crafted with
+                  - link "Getastrothemes" [ref=e481] [cursor=pointer]:
+                    - /url: https://getastrothemes.com/
+            - list [ref=e482]:
+              - listitem [ref=e483]:
+                - link "linkedin" [ref=e484] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/craig-fearn/
+                  - generic [ref=e485] [cursor=pointer]: linkedin
+                  - img [ref=e486] [cursor=pointer]
+        - generic [ref=e488]:
+          - textbox "Full Name *" [ref=e490]
+          - textbox "Email Address *" [ref=e492]
+          - button "Subject *" [ref=e496] [cursor=pointer]:
+            - img [ref=e498] [cursor=pointer]
+            - generic [ref=e501] [cursor=pointer]: Subject *
+          - button "Subject With Search *" [ref=e505] [cursor=pointer]:
+            - img [ref=e507] [cursor=pointer]
+            - generic [ref=e510] [cursor=pointer]: Subject With Search *
+          - textbox "How can we help you *" [ref=e512]
+          - generic [ref=e513]:
+            - generic [ref=e514]: How did you hear about us?
+            - generic [ref=e515]:
+              - generic [ref=e516]:
+                - radio "Google Search" [ref=e517] [cursor=pointer]
+                - generic [ref=e518] [cursor=pointer]: Google Search
+              - generic [ref=e519]:
+                - radio "Social Media" [ref=e520] [cursor=pointer]
+                - generic [ref=e521] [cursor=pointer]: Social Media
+          - generic [ref=e523]:
+            - checkbox "I agree to the terms and conditions and privacy policy." [ref=e524] [cursor=pointer]
+            - generic [ref=e525] [cursor=pointer]:
+              - text: I agree to the terms and conditions and
+              - link "privacy policy" [ref=e526] [cursor=pointer]:
+                - /url: /
+              - text: .
+          - button "SEND MESSAGE" [ref=e528] [cursor=pointer]: SEND MESSAGE
+      - generic [ref=e529]:
+        - paragraph [ref=e530]: Birmingham, West Midlands, UK
+        - generic [ref=e531]:
+          - paragraph [ref=e532]:
+            - link "+44 (0) 7738 419 446" [ref=e533] [cursor=pointer]:
+              - /url: tel:+447738419446
+          - paragraph [ref=e534]:
+            - link "craig.fearn@lighthousementoring.co.uk" [ref=e535] [cursor=pointer]:
+              - /url: mailto:craig.fearn@lighthousementoring.co.uk
+  - generic:
+    - link "Buy PRO Version":
+      - /url: https://getastrothemes.com/astro-themes/folex/
+      - text: Buy PRO Version
+    - link "Download Now":
+      - /url: https://getastrothemes.com/astro-themes/folex-lite/
+      - text: Download Now
+  - generic [ref=e537]: XS — ≤ 539px
+  - generic [ref=e540]:
+    - button "Menu" [ref=e541]:
+      - img [ref=e543]
+      - generic: Menu
+    - button "Inspect" [ref=e547]:
+      - img [ref=e549]
+      - generic: Inspect
+    - button "Audit" [ref=e551]:
+      - generic [ref=e552]:
+        - img [ref=e553]
+        - img [ref=e556]
+      - generic: Audit
+    - button "Settings" [ref=e559]:
+      - img [ref=e561]
+      - generic: Settings
+```

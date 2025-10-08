@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'Contact Fearnbell Marketing | Get Your Free Consultation';
+const pageDescription = 'Get in touch with Fearnbell Marketing for a free consultation. Fair pricing, transparent process, and real results for your business.';
+const pageKeywords = ['contact fearnbell marketing', 'free marketing consultation', 'marketing agency contact', 'get marketing quote'];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  keywords={pageKeywords}
+  structuredDataType="LocalBusiness"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Let's Build Something Amazing Together
+        </h1>
+        <p class="text-xl text-gray-600">
+          Get a free consultation and see how we can help grow your business with fair, transparent marketing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold mb-6">Get Your Free Consultation</h2>
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                  Company Name
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+              
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">
+                  Service Interested In
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">Select a service</option>
+                  <option value="website">Website Development</option>
+                  <option value="seo">SEO Optimization</option>
+                  <option value="competitor">Competitor Research</option>
+                  <option value="package">Complete Package</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                  Tell Us About Your Project
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                class="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          
+          <!-- Contact Info -->
+          <div>
+            <h2 class="text-2xl font-bold mb-6">Why Choose Fearnbell?</h2>
+            
+            <div class="space-y-6 mb-8">
+              <div class="flex items-start">
+                <span class="text-2xl mr-4">✅</span>
+                <div>
+                  <h3 class="font-semibold mb-1">Free Consultation</h3>
+                  <p class="text-gray-600">No obligation. Just honest advice about your marketing needs.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <span class="text-2xl mr-4">💚</span>
+                <div>
+                  <h3 class="font-semibold mb-1">Transparent Pricing</h3>
+                  <p class="text-gray-600">Know exactly what you'll pay before we start. No surprises.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <span class="text-2xl mr-4">📈</span>
+                <div>
+                  <h3 class="font-semibold mb-1">Proven Results</h3>
+                  <p class="text-gray-600">We only succeed when you succeed. Check our case studies.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <span class="text-2xl mr-4">🤝</span>
+                <div>
+                  <h3 class="font-semibold mb-1">Fair Payment Terms</h3>
+                  <p class="text-gray-600">Split your investment into 4 easy monthly payments.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+              <h3 class="font-semibold mb-4">Get In Touch</h3>
+              <div class="space-y-3 text-gray-600">
+                <div class="flex items-center">
+                  <span class="mr-3">📧</span>
+                  <a href="mailto:hello@fearnbellmarketing.com" class="hover:text-blue-600">
+                    hello@fearnbellmarketing.com
+                  </a>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-3">📱</span>
+                  <a href="tel:+447890123456" class="hover:text-blue-600">
+                    +44 789 012 3456
+                  </a>
+                </div>
+                <div class="flex items-center">
+                  <span class="mr-3">🕐</span>
+                  <span>Mon-Fri, 9:00 AM - 6:00 PM GMT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">
+          Join 100+ Businesses That Trust Fearnbell
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">95%</div>
+            <p class="text-gray-600">Client Retention</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">4.9</div>
+            <p class="text-gray-600">Average Rating</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">100+</div>
+            <p class="text-gray-600">Projects Completed</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-blue-600">24hr</div>
+            <p class="text-gray-600">Response Time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

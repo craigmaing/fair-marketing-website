@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "dataforseo": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "env": {
+        "DATAFORSEO_LOGIN": "YOUR_DATAFORSEO_EMAIL",
+        "DATAFORSEO_PASSWORD": "YOUR_DATAFORSEO_PASSWORD"
+      }
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": ["@mcp/puppeteer"],
+      "env": {}
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["@mcp/fetch"],
+      "env": {}
+    },
+    "astro-docs": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-astro-docs"]
+    }
+  }
+}

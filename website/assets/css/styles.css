@@ -1,0 +1,94 @@
+/* Fearnbell Marketing – Brand Styles */
+:root {
+  --color-primary: #1e3a8a; /* Trust blue */
+  --color-secondary: #3b82f6; /* Bright blue */
+  --color-accent: #10b981; /* Success green */
+  --color-warning: #f59e0b; /* Amber */
+  --color-neutral: #64748b; /* Gray */
+  --color-bg: #0b1220; /* Deep navy background */
+  --color-surface: #0f172a; /* Card surface */
+  --color-text: #e5e7eb; /* Light text */
+  --color-muted: #94a3b8;
+
+  --radius: 12px;
+  --shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: radial-gradient(1200px 800px at 10% 0%, rgba(59,130,246,0.12) 0%, rgba(15,23,42,0) 60%),
+              radial-gradient(1000px 700px at 90% 10%, rgba(16,185,129,0.10) 0%, rgba(15,23,42,0) 65%),
+              var(--color-bg);
+}
+
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.grid { display: grid; gap: 24px; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+header.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(11,18,32,0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148,163,184,0.15);
+}
+.nav { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+.brand { display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
+.brand-logo { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, var(--color-secondary), var(--color-accent)); display:grid; place-items:center; font-weight:800; }
+.brand-name { font-weight: 700; letter-spacing: 0.2px; }
+.nav-links { display:flex; gap:18px; }
+.nav-links a { color: var(--color-muted); text-decoration:none; font-weight:600; }
+.nav-links a:hover { color: #fff; }
+
+.hero { padding: 64px 0 32px; }
+.hero-card {
+  background: linear-gradient(180deg, rgba(30,58,138,0.22), rgba(15,23,42,0.25));
+  border: 1px solid rgba(59,130,246,0.25);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.pill { display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background: rgba(16,185,129,0.15); color:#d1fae5; border:1px solid rgba(16,185,129,0.35); font-weight:700; font-size:12px; letter-spacing:.3px; }
+.h1 { font-size: clamp(32px, 4.5vw, 52px); margin: 12px 0 10px; line-height: 1.15; }
+.lead { font-size: clamp(16px, 2.2vw, 19px); color: var(--color-muted); max-width: 65ch; }
+
+.cta { display:flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+.btn { display:inline-flex; align-items:center; gap:10px; padding: 12px 16px; border-radius: 12px; text-decoration:none; font-weight:700; border: 1px solid rgba(148,163,184,0.2); }
+.btn-primary { background: linear-gradient(135deg, var(--color-secondary), var(--color-accent)); color:#041221; border: none; }
+.btn-secondary { background: rgba(2,6,23,0.5); color:#e2e8f0; }
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); transition: .15s ease; }
+
+.section { padding: 36px 0; }
+.section h2 { font-size: 26px; margin: 0 0 12px; }
+.card { background: linear-gradient(180deg, rgba(2,6,23,0.8), rgba(2,6,23,0.55)); border:1px solid rgba(148,163,184,0.15); border-radius: 16px; padding:18px; }
+.card h3 { margin: 0 0 8px; font-size: 18px; }
+.muted { color: var(--color-muted); }
+
+.footer { margin-top: 40px; padding: 24px 0 40px; color: var(--color-muted); border-top: 1px solid rgba(148,163,184,0.18); }
+.footer small { color: var(--color-muted); }
+
+/* Utilities */
+.list { margin: 10px 0; padding-left: 20px; }
+.kpi { display:flex; gap:12px; align-items: center; }
+.kpi .value { font-weight:800; color:#fff; font-size: 20px; }
+.kpi .label { color: var(--color-muted); }
+
+/* Forms */
+form { display:grid; gap:12px; }
+input, textarea { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(148,163,184,0.25); background: rgba(2,6,23,0.5); color: #e5e7eb; }
+label { font-weight: 600; font-size: 14px; color: #cbd5e1; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid rgba(148,163,184,0.15); }
+thead th { color:#cbd5e1; font-size: 14px; }
+
+/* Responsive */
+@media (max-width: 720px) {
+  .nav-links { display:none; }
+}
+

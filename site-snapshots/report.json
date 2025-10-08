@@ -1,0 +1,43 @@
+{
+  "base": "http://localhost:5173",
+  "generatedAt": "2025-09-01T11:43:36.553Z",
+  "pages": [
+    {
+      "path": "/",
+      "url": "http://localhost:5173/",
+      "title": "AI + Human Wellbeing Audits | Lighthouse Mentoring",
+      "h1": "AI + Human Wellbeing Audits for UK SMEs",
+      "metaDescription": "UK's first AI-enhanced wellbeing audits. Combine Craig Fearn's 17 years of expertise with modern pattern recognition to reveal risks, measure culture, and drive outcomes.",
+      "navLinks": 11,
+      "screenshot": "C:\\Users\\Fearn\\fearnbell\\site-snapshots\\home.png"
+    },
+    {
+      "path": "/about/",
+      "url": "http://localhost:5173/about/",
+      "title": "About | Lighthouse Mentoring",
+      "h1": "About Lighthouse Mentoring",
+      "metaDescription": "Led by Craig Fearn FRSPH — IoD Ambassador and multi‑award nominee.",
+      "navLinks": 11,
+      "screenshot": "C:\\Users\\Fearn\\fearnbell\\site-snapshots\\about.png"
+    },
+    {
+      "path": "/services/",
+      "url": "http://localhost:5173/services/",
+      "title": "Services | Lighthouse Mentoring",
+      "h1": "Services",
+      "metaDescription": "Wellbeing audits, culture reviews, and post-audit advisory for SMEs.",
+      "navLinks": 11,
+      "screenshot": "C:\\Users\\Fearn\\fearnbell\\site-snapshots\\services.png"
+    },
+    {
+      "path": "/services/website-development/",
+      "url": "http://localhost:5173/services/website-development/",
+      "error": "HTTP 404"
+    },
+    {
+      "path": "/services/seo-optimization/",
+      "url": "http://localhost:5173/services/seo-optimization/",
+      "error": "HTTP 404"
+    }
+  ]
+}

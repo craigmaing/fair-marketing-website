@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/marketing/Hero.astro';
+import Features from '../components/marketing/Features.astro';
+import PricingTable from '../components/marketing/PricingTable.astro';
+import { brand } from '../lib/brand';
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    company: "TechStart UK",
+    content: "Fearnbell delivered exactly what they promised - a lightning-fast website that outranks our competitors. The transparent pricing was refreshing.",
+    rating: 5
+  },
+  {
+    name: "Michael Chen",
+    role: "Marketing Director",
+    company: "Growth Solutions",
+    content: "The competitor analysis alone was worth the investment. We now rank #1 for our main keywords, up from page 3.",
+    rating: 5
+  },
+  {
+    name: "Emma Williams",
+    role: "Founder",
+    company: "Eco Products Ltd",
+    content: "Fair pricing, incredible results. Our website loads in under 2 seconds and conversions are up 40%.",
+    rating: 5
+  }
+];
+---
+
+<BaseLayout
+  title="Fair Marketing That Actually Works"
+  description="The only marketing agency that shows you exactly how we'll beat your competitors - and charges fairly for it. Transparent pricing, real results."
+  keywords={['fearnbell marketing', 'fair marketing agency', 'transparent pricing', 'website development', 'SEO services']}
+>
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Trust Bar -->
+  <section class="py-12 bg-white border-y border-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center items-center gap-8 opacity-60">
+        <span class="text-sm font-medium text-[var(--text-secondary)]">Trusted by businesses across the UK</span>
+        <div class="flex flex-wrap justify-center gap-8">
+          {['TechStart', 'Growth Solutions', 'Eco Products', 'Digital First', 'Market Leaders'].map((company) => (
+            <span class="text-lg font-semibold text-[var(--text-secondary)]">{company}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <Features />
+
+  <!-- How It Works -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+          How We <span class="text-gradient">Deliver Results</span>
+        </h2>
+        <p class="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
+          Our proven 4-step process ensures you get exactly what you need to succeed online.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        {[
+          { 
+            step: '01', 
+            title: 'Free Analysis', 
+            description: 'We analyze your competitors and identify opportunities to outrank them.' 
+          },
+          { 
+            step: '02', 
+            title: 'Strategic Planning', 
+            description: 'Create a custom strategy based on data, not guesswork or assumptions.' 
+          },
+          { 
+            step: '03', 
+            title: 'Build & Optimize', 
+            description: 'Develop your high-performance website with SEO built in from day one.' 
+          },
+          { 
+            step: '04', 
+            title: 'Launch & Support', 
+            description: 'Go live with confidence and ongoing support to ensure continued success.' 
+          }
+        ].map((item, index) => (
+          <div class="relative">
+            {index < 3 && (
+              <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[var(--primary)] to-transparent"></div>
+            )}
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-primary text-white rounded-full flex items-center justify-center font-bold text-xl mb-4 mx-auto">
+                {item.step}
+              </div>
+              <h3 class="text-xl font-bold text-[var(--text-primary)] mb-2">{item.title}</h3>
+              <p class="text-[var(--text-secondary)]">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-slate-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+          Real Results, <span class="text-gradient">Real Clients</span>
+        </h2>
+        <p class="text-xl text-[var(--text-secondary)] max-w-2xl mx-auto">
+          Don't just take our word for it. See what our clients have to say about working with Fearnbell Marketing.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {testimonials.map((testimonial) => (
+          <div class="bg-white rounded-xl p-8 shadow-soft hover:shadow-xl transition-shadow">
+            <div class="flex mb-4">
+              {[...Array(testimonial.rating)].map(() => (
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+              ))}
+            </div>
+            <p class="text-[var(--text-primary)] mb-6 italic">"{testimonial.content}"</p>
+            <div>
+              <p class="font-semibold text-[var(--text-primary)]">{testimonial.name}</p>
+              <p class="text-sm text-[var(--text-secondary)]">{testimonial.role}, {testimonial.company}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <PricingTable />
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-gradient-primary text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Ready to Beat Your Competitors?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+        Get your free competitor analysis today and see exactly how we'll help you dominate your market.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn bg-white text-[var(--primary)] hover:bg-gray-100">
+          Get Free Analysis
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        <a href="/pricing" class="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
+          View Pricing
+        </a>
+      </div>
+      <p class="mt-8 text-sm opacity-75">
+        No credit card required • Free competitor analysis • 30-day money-back guarantee
+      </p>
+    </div>
+  </section>
+</BaseLayout>
