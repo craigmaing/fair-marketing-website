@@ -1,7 +1,7 @@
 # Netlify configuration for Outcome Digital Marketing (Astro site)
 
 [build]
-  command = "npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   publish = "dist"
 
 [build.environment]
