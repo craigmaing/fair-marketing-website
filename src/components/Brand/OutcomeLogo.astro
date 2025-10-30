@@ -3,9 +3,10 @@ export interface Props {
   variant?: 'full' | 'icon' | 'horizontal';
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
+  invert?: boolean;
 }
 
-const { variant = 'full', size = 'md', className = '' } = Astro.props;
+const { variant = 'horizontal', size = 'md', className = '', invert = false } = Astro.props;
 
 const sizeClasses = {
   sm: 'h-8',
@@ -15,106 +16,47 @@ const sizeClasses = {
 };
 
 const sizeClass = sizeClasses[size];
+const logoSrc = invert ? '/outcome-logo-white.png' : '/outcome-logo.png';
+const invertClass = invert ? 'brightness-0 invert' : '';
 ---
 
 <div class={`inline-flex items-center ${className}`}>
   {variant === 'icon' ? (
     <!-- Icon only variant -->
-    <svg
-      class={sizeClass}
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="Outcome Digital Logo"
-    >
-      <!-- Modern O with integrated upward arrow showing growth -->
-      <defs>
-        <linearGradient id="outcomeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-        </linearGradient>
-      </defs>
-
-      <!-- Outer circle (O shape) -->
-      <circle
-        cx="50"
-        cy="50"
-        r="40"
-        stroke="url(#outcomeGradient)"
-        stroke-width="8"
-        fill="none"
-      />
-
-      <!-- Inner arrow pointing upward (representing positive outcomes) -->
-      <path
-        d="M 50 70 L 50 30 M 35 45 L 50 30 L 65 45"
-        stroke="url(#outcomeGradient)"
-        stroke-width="6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        fill="none"
-      />
-    </svg>
+    <img
+      src={logoSrc}
+      alt="Outcome Digital Logo"
+      class={`${sizeClass} object-contain ${invertClass}`}
+    />
   ) : variant === 'horizontal' ? (
-    <!-- Horizontal layout -->
-    <div class="flex items-center gap-3">
-      <svg
-        class={sizeClass}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="outcomeGradientH" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="40" stroke="url(#outcomeGradientH)" stroke-width="8" fill="none"/>
-        <path d="M 50 70 L 50 30 M 35 45 L 50 30 L 65 45" stroke="url(#outcomeGradientH)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <div>
-        <div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-          OUTCOME
-        </div>
-        <div class="text-sm text-gray-600 -mt-1">Digital Marketing Ltd</div>
-      </div>
+    <!-- Horizontal layout with logo image -->
+    <div class="flex items-center gap-2">
+      <img
+        src={logoSrc}
+        alt="Outcome Digital Logo"
+        class={`${sizeClass} object-contain ${invertClass}`}
+      />
     </div>
   ) : (
     <!-- Full vertical variant (default) -->
     <div class="flex flex-col items-center">
-      <svg
-        class={sizeClass}
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <linearGradient id="outcomeGradientF" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="40" stroke="url(#outcomeGradientF)" stroke-width="8" fill="none"/>
-        <path d="M 50 70 L 50 30 M 35 45 L 50 30 L 65 45" stroke="url(#outcomeGradientF)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <div class="mt-2 text-center">
-        <div class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-          OUTCOME
-        </div>
-        <div class="text-xs text-gray-600 tracking-wider">DIGITAL MARKETING LTD</div>
-      </div>
+      <img
+        src={logoSrc}
+        alt="Outcome Digital Logo"
+        class={`${sizeClass} object-contain ${invertClass}`}
+      />
     </div>
   )}
 </div>
 
 <style>
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
-  svg:hover {
-    animation: pulse 2s infinite;
+  img:hover {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
   }
 </style>
